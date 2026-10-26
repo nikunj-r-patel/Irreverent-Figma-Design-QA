@@ -1,0 +1,4542 @@
+[
+  {
+    "figmaNodeId": "1171:18095",
+    "text": "YOU’RE EXATLY WHERE YOU ARE MEANT TO BE",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "HERO",
+      "Central",
+      "Content",
+      "STATEMENT",
+      "YOU’RE EXATLY WHERE YOU ARE MEANT TO BE"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 157.419921875,
+      "width": 234,
+      "height": 448,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 80,
+      "fontWeight": "800",
+      "lineHeight": "64px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "YOU’RE EXATLY WHERE YOU ARE MEANT TO BE"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1171:18107;1117:7911",
+    "text": "FORTUNE COOKIE WISDOM",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "HERO",
+      "Central",
+      "Content",
+      "cta",
+      "container",
+      "relevant now"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 694.080078125,
+      "width": 164,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "FORTUNE COOKIE WISDOM"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1138:16659;516:4911",
+    "text": "explore new collection",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "HERO",
+      "Central",
+      "Content",
+      "cta",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 36,
+      "pageY": 737.580078125,
+      "width": 154,
+      "height": 24,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "explore new collection"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "1117:7911",
+    "text": "relevant now",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "container",
+      "relevant now"
+    ],
+    "styles": {
+      "pageX": 590.5,
+      "pageY": 990,
+      "width": 99,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "relevant now"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11216;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": -652,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11216;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": -713.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11216;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": -715,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11216;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": -715,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11216;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": -715,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11216;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": -700,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11217;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": -402,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11217;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": -463.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11217;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": -465,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11217;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": -465,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11217;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": -465,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11217;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": -450,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11218;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": -152,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11218;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": -213.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11218;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": -215,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11218;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": -215,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11218;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": -215,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11218;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": -200,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11219;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 98,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11219;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 36.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11219;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 35,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11219;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 35,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11219;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 35,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11219;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 50,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11220;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 348,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11220;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 286.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11220;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 285,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11220;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 285,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11220;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 285,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11220;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 300,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11221;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 598,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11221;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 536.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11221;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 535,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11221;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 535,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11221;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 535,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11221;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 550,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9441;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 848,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9441;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 786.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9441;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 785,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9441;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 785,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9441;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 785,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9441;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 800,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9470;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 1098,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9470;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 1036.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9470;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 1035,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9470;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 1035,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9470;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 1035,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9470;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 1050,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9499;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 1348,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9499;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 1286.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9499;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 1285,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9499;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 1285,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9499;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 1285,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9499;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 1300,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9528;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 1598,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9528;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 1536.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9528;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 1535,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9528;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 1535,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9528;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 1535,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1346:9528;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 1550,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11222;356:13831;162:3676",
+    "text": "add to cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 1848,
+      "pageY": 1289.5,
+      "width": 56,
+      "height": 18,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "18px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "add to cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11222;1275:10457",
+    "text": "+3",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product",
+      "Colors",
+      "Color Picker",
+      "+3"
+    ],
+    "styles": {
+      "pageX": 1786.5,
+      "pageY": 1196.5,
+      "width": 13,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "+3"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11222;356:13834",
+    "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    ],
+    "styles": {
+      "pageX": 1785,
+      "pageY": 1289.5,
+      "width": 210,
+      "height": 28,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "FK CANCER Coalition Vintage T-Shirt JDFASJFSHFJASF"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11222;356:13835",
+    "text": "//Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Name",
+      "//Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 1785,
+      "pageY": 1321.5,
+      "width": 210,
+      "height": 12,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "//Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1330:11222;356:13837",
+    "text": "$309.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Final Price"
+    ],
+    "styles": {
+      "pageX": 1785,
+      "pageY": 1333.5,
+      "width": 44,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "$309.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I1330:11222;356:13838",
+    "text": "$199.00",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Featured",
+      "Product Row",
+      "Products",
+      "Product Card",
+      "Product Info",
+      "Price",
+      "Initial Price"
+    ],
+    "styles": {
+      "pageX": 1800,
+      "pageY": 1347.5,
+      "width": 27,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "$199.00"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "1346:9050",
+    "text": "Shop by attitude .",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Shop by attitude ."
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 1608,
+      "width": 690,
+      "height": 274,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 152,
+      "fontWeight": "900",
+      "lineHeight": "136.8000030517578px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "Shop by attitude ."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9078",
+    "text": "[03]",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "Frame 194",
+      "[03]"
+    ],
+    "styles": {
+      "pageX": 684.25,
+      "pageY": 1964.111328125,
+      "width": 26,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "300",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "[03]"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "1346:9079",
+    "text": "socially irreverent",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "Frame 194",
+      "socially irreverent"
+    ],
+    "styles": {
+      "pageX": 543,
+      "pageY": 1993.111328125,
+      "width": 167.25,
+      "height": 48,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "socially irreverent"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9081",
+    "text": "[01]",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "[01]"
+    ],
+    "styles": {
+      "pageX": 1092.75,
+      "pageY": 1645.611328125,
+      "width": 167.25,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "300",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "[01]"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9082",
+    "text": "skull gear",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "skull gear"
+    ],
+    "styles": {
+      "pageX": 1092.75,
+      "pageY": 1674.611328125,
+      "width": 167.25,
+      "height": 24,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "skull gear"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9087",
+    "text": "[04]",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "[04]"
+    ],
+    "styles": {
+      "pageX": 909.5,
+      "pageY": 2057.111328125,
+      "width": 167.25,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "300",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "[04]"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9088",
+    "text": "skullsport",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "skullsport"
+    ],
+    "styles": {
+      "pageX": 909.5,
+      "pageY": 2086.111328125,
+      "width": 167.25,
+      "height": 24,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "skullsport"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9084",
+    "text": "[02]",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "[02]"
+    ],
+    "styles": {
+      "pageX": 909.5,
+      "pageY": 1792.861328125,
+      "width": 167.25,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "300",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "[02]"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9085",
+    "text": "Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Content",
+      "RIGHT",
+      "Collection grid",
+      "Collection Names",
+      "Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 909.5,
+      "pageY": 1821.861328125,
+      "width": 167.25,
+      "height": 48,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1346:9558",
+    "text": "No attitude today?",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Bottom",
+      "Button",
+      "No attitude today?"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 2351,
+      "width": 148,
+      "height": 24,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "No attitude today?"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1346:9559;162:3943",
+    "text": "SHOP ALL",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Collection",
+      "Bottom",
+      "Button",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 48.5,
+      "pageY": 2391,
+      "width": 55,
+      "height": 24,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "SHOP ALL"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "1117:7849",
+    "text": "for the bold. the defiant. the unapologetic",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "About",
+      "Brand",
+      "FOR WHO",
+      "STATEMENT",
+      "for the bold. the defiant. the unapologetic"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 2623.611328125,
+      "width": 1240,
+      "height": 128,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 80,
+      "fontWeight": "800",
+      "lineHeight": "64px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "for the bold. the defiant. the unapologetic"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1117:7853;705:6875",
+    "text": "READ OUR MANIFESTO",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "About",
+      "Brand",
+      "FOR WHO",
+      "Bottom",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 2852.271484375,
+      "width": 124,
+      "height": 24,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "READ OUR MANIFESTO"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "1126:8286",
+    "text": "PUTTING THE ATTITUDE TO GOOD USE.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "About",
+      "FK CANCER",
+      "Content",
+      "Left",
+      "PUTTING THE ATTITUDE TO GOOD USE."
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 3168.271484375,
+      "width": 564,
+      "height": 192,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 80,
+      "fontWeight": "800",
+      "lineHeight": "64px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "PUTTING THE ATTITUDE TO GOOD USE."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1126:8287",
+    "text": "We like our clothes to do more than look good. 100% of the proceeds from our FK Cancer shirt go directly to Caring for a Cure and their fight against cancer.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "About",
+      "FK CANCER",
+      "Content",
+      "Left",
+      "We like our clothes to do more than look good. 100% of the proceeds from our FK Cancer shirt go directly to Caring for a Cure and their fight against cancer."
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 3437.271484375,
+      "width": 407,
+      "height": 72,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "We like our clothes to do more than look good. 100% of the proceeds from our FK Cancer shirt go directly to Caring for a Cure and their fight against cancer."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I2619:29363;516:4911",
+    "text": "Buy hoodie",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "About",
+      "FK CANCER",
+      "Content",
+      "Right",
+      "Buttons",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 866,
+      "pageY": 3580.607421875,
+      "width": 68,
+      "height": 24,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "Buy hoodie"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I2619:29364;516:4965",
+    "text": "Buy t-shirt",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "About",
+      "FK CANCER",
+      "Content",
+      "Right",
+      "Buttons",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 1026,
+      "pageY": 3580.607421875,
+      "width": 72,
+      "height": 24,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "Buy t-shirt"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "1117:7974",
+    "text": "wear what you mean .",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "About",
+      "Text",
+      "wear what you mean ."
+    ],
+    "styles": {
+      "pageX": 48,
+      "pageY": 3565.3349609375,
+      "width": 622,
+      "height": 411,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 152,
+      "fontWeight": "900",
+      "lineHeight": "136.8000030517578px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "wear what you mean ."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1348:12958;1348:12955",
+    "text": "Tees",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Categories",
+      "section/row",
+      "categories item",
+      "Tees"
+    ],
+    "styles": {
+      "pageX": 36,
+      "pageY": 4218.607421875,
+      "width": 370.6666564941406,
+      "height": 36,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 40,
+      "fontWeight": "900",
+      "lineHeight": "36px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Tees"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1348:12964;1348:12955",
+    "text": "hoodies",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Categories",
+      "section/row",
+      "categories item",
+      "Tees"
+    ],
+    "styles": {
+      "pageX": 454.6669921875,
+      "pageY": 4218.607421875,
+      "width": 370.6666564941406,
+      "height": 36,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 40,
+      "fontWeight": "900",
+      "lineHeight": "36px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "hoodies"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1348:12970;1348:12955",
+    "text": "totes",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Categories",
+      "section/row",
+      "categories item",
+      "Tees"
+    ],
+    "styles": {
+      "pageX": 873.3330078125,
+      "pageY": 4218.607421875,
+      "width": 370.6666564941406,
+      "height": 36,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 40,
+      "fontWeight": "900",
+      "lineHeight": "36px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "totes"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1348:12976;1348:12955",
+    "text": "mugs",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Categories",
+      "section/row",
+      "categories item",
+      "Tees"
+    ],
+    "styles": {
+      "pageX": 36,
+      "pageY": 4688.607421875,
+      "width": 370.6666564941406,
+      "height": 36,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 40,
+      "fontWeight": "900",
+      "lineHeight": "36px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "mugs"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1348:12982;1348:12955",
+    "text": "hats",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Categories",
+      "section/row",
+      "categories item",
+      "Tees"
+    ],
+    "styles": {
+      "pageX": 454.6669921875,
+      "pageY": 4688.607421875,
+      "width": 370.6666564941406,
+      "height": 36,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 40,
+      "fontWeight": "900",
+      "lineHeight": "36px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "hats"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "1017:5436",
+    "text": "DON’T TAKE OUR WORD FOR IT.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Title container",
+      "Title",
+      "DON’T TAKE OUR WORD FOR IT."
+    ],
+    "styles": {
+      "pageX": 28,
+      "pageY": 4988.607421875,
+      "width": 367,
+      "height": 192,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 80,
+      "fontWeight": "800",
+      "lineHeight": "64px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "DON’T TAKE OUR WORD FOR IT."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7194;1017:7182",
+    "text": "My daughter already stole the skull hoodie. I love my FCW shirt — this is NOT a dress rehearsal.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Review"
+    ],
+    "styles": {
+      "pageX": 346,
+      "pageY": 5262.3359375,
+      "width": 239,
+      "height": 72,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "My daughter already stole the skull hoodie. I love my FCW shirt — this is NOT a dress rehearsal."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7194;1017:7183",
+    "text": "MICHELLE  · VERIFIED BUYER",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Person Name"
+    ],
+    "styles": {
+      "pageX": 346,
+      "pageY": 5346.3359375,
+      "width": 239,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "500",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "MICHELLE  · VERIFIED BUYER"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7194;1017:7185;1017:7115",
+    "text": "They bought",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "They bought"
+    ],
+    "styles": {
+      "pageX": 430,
+      "pageY": 5387.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "They bought"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7194;1017:7185;1017:7116",
+    "text": "fcw chop tee",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "fcw chop tee"
+    ],
+    "styles": {
+      "pageX": 430,
+      "pageY": 5405.3359375,
+      "width": 151,
+      "height": 24,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "fcw chop tee"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7194;1017:7185;1017:7117",
+    "text": "BLack · L",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "BLack · L"
+    ],
+    "styles": {
+      "pageX": 430,
+      "pageY": 5433.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "BLack · L"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7206;1017:7182",
+    "text": "Just got my hat with the skull. LOVE.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Review"
+    ],
+    "styles": {
+      "pageX": 625,
+      "pageY": 5262.3359375,
+      "width": 239,
+      "height": 48,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Just got my hat with the skull. LOVE."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7206;1017:7183",
+    "text": "MICHELLE  · VERIFIED BUYER",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Person Name"
+    ],
+    "styles": {
+      "pageX": 625,
+      "pageY": 5322.3359375,
+      "width": 239,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "500",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "MICHELLE  · VERIFIED BUYER"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7206;1017:7185;1017:7115",
+    "text": "They bought",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "They bought"
+    ],
+    "styles": {
+      "pageX": 709,
+      "pageY": 5363.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "They bought"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7206;1017:7185;1017:7116",
+    "text": "fcw chop tee",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "fcw chop tee"
+    ],
+    "styles": {
+      "pageX": 709,
+      "pageY": 5381.3359375,
+      "width": 151,
+      "height": 24,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "fcw chop tee"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7206;1017:7185;1017:7117",
+    "text": "BLack · L",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "BLack · L"
+    ],
+    "styles": {
+      "pageX": 709,
+      "pageY": 5409.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "BLack · L"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7218;1017:7182",
+    "text": "Quality is good. Just washed everything and it came out looking great.  No real shrinking.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Review"
+    ],
+    "styles": {
+      "pageX": 904,
+      "pageY": 5262.3359375,
+      "width": 239,
+      "height": 96,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Quality is good. Just washed everything and it came out looking great.  No real shrinking."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7218;1017:7183",
+    "text": "MICHELLE  · VERIFIED BUYER",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Person Name"
+    ],
+    "styles": {
+      "pageX": 904,
+      "pageY": 5370.3359375,
+      "width": 239,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "500",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "MICHELLE  · VERIFIED BUYER"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7218;1017:7185;1017:7115",
+    "text": "They bought",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "They bought"
+    ],
+    "styles": {
+      "pageX": 988,
+      "pageY": 5411.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "They bought"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7218;1017:7185;1017:7116",
+    "text": "fcw chop tee",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "fcw chop tee"
+    ],
+    "styles": {
+      "pageX": 988,
+      "pageY": 5429.3359375,
+      "width": 151,
+      "height": 24,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "fcw chop tee"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7218;1017:7185;1017:7117",
+    "text": "BLack · L",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "BLack · L"
+    ],
+    "styles": {
+      "pageX": 988,
+      "pageY": 5457.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "BLack · L"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7507;1017:7182",
+    "text": "Comfortable fit and soft fabric. Perfect for everyday wear. Highly recommend!",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Review"
+    ],
+    "styles": {
+      "pageX": 1183,
+      "pageY": 5262.3359375,
+      "width": 239,
+      "height": 72,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Comfortable fit and soft fabric. Perfect for everyday wear. Highly recommend!"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7507;1017:7183",
+    "text": "JAMES  · VERIFIED BUYER",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Person Name"
+    ],
+    "styles": {
+      "pageX": 1183,
+      "pageY": 5346.3359375,
+      "width": 239,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "500",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "JAMES  · VERIFIED BUYER"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7507;1017:7185;1017:7115",
+    "text": "They bought",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "They bought"
+    ],
+    "styles": {
+      "pageX": 1267,
+      "pageY": 5387.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "They bought"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7507;1017:7185;1017:7116",
+    "text": "classic crew neck",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "fcw chop tee"
+    ],
+    "styles": {
+      "pageX": 1267,
+      "pageY": 5405.3359375,
+      "width": 151,
+      "height": 48,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "classic crew neck"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7507;1017:7185;1017:7117",
+    "text": "White · M",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "BLack · L"
+    ],
+    "styles": {
+      "pageX": 1267,
+      "pageY": 5457.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "White · M"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7521;1017:7182",
+    "text": "Great design and vibrant colors. I received compliments all day!",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Review"
+    ],
+    "styles": {
+      "pageX": 1462,
+      "pageY": 5262.3359375,
+      "width": 239,
+      "height": 48,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Great design and vibrant colors. I received compliments all day!"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7521;1017:7183",
+    "text": "SARAH  · VERIFIED BUYER",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Person Name"
+    ],
+    "styles": {
+      "pageX": 1462,
+      "pageY": 5322.3359375,
+      "width": 239,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "500",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "SARAH  · VERIFIED BUYER"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7521;1017:7185;1017:7115",
+    "text": "They bought",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "They bought"
+    ],
+    "styles": {
+      "pageX": 1546,
+      "pageY": 5363.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "They bought"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7521;1017:7185;1017:7116",
+    "text": "graphic tank top",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "fcw chop tee"
+    ],
+    "styles": {
+      "pageX": 1546,
+      "pageY": 5381.3359375,
+      "width": 151,
+      "height": 48,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "graphic tank top"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7521;1017:7185;1017:7117",
+    "text": "Red · S",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "BLack · L"
+    ],
+    "styles": {
+      "pageX": 1546,
+      "pageY": 5433.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Red · S"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7535;1017:7182",
+    "text": "Fits true to size and feels durable. I’ll definitely order more soon!",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Review"
+    ],
+    "styles": {
+      "pageX": 1741,
+      "pageY": 5262.3359375,
+      "width": 239,
+      "height": 48,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Fits true to size and feels durable. I’ll definitely order more soon!"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7535;1017:7183",
+    "text": "DAVID  · VERIFIED BUYER",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Info",
+      "Person Name"
+    ],
+    "styles": {
+      "pageX": 1741,
+      "pageY": 5322.3359375,
+      "width": 239,
+      "height": 21,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "500",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "DAVID  · VERIFIED BUYER"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7535;1017:7185;1017:7115",
+    "text": "They bought",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "They bought"
+    ],
+    "styles": {
+      "pageX": 1825,
+      "pageY": 5363.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(106, 115, 124, 1)",
+      "text": "They bought"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7535;1017:7185;1017:7116",
+    "text": "premium hoodie",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "fcw chop tee"
+    ],
+    "styles": {
+      "pageX": 1825,
+      "pageY": 5381.3359375,
+      "width": 151,
+      "height": 24,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "900",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "premium hoodie"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I1017:7535;1017:7185;1017:7117",
+    "text": "Navy · XL",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Reviews",
+      "Review Container",
+      "Container",
+      "Reviews Row",
+      "Reviews",
+      "Review Card",
+      "Review Product",
+      "Product Info",
+      "BLack · L"
+    ],
+    "styles": {
+      "pageX": 1825,
+      "pageY": 5409.3359375,
+      "width": 151,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "900",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Navy · XL"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I839:11575;839:10943",
+    "text": "Buy enough questionable opinions and shipping is on us (over $50)",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Banner",
+      "1"
+    ],
+    "styles": {
+      "pageX": 338,
+      "pageY": 88,
+      "width": 603,
+      "height": 24,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "Buy enough questionable opinions and shipping is on us (over $50)"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I737:8424;503:2090;705:7029",
+    "text": "shop",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "LEFT",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 30.5,
+      "width": 27,
+      "height": 21,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 14,
+      "fontWeight": "700",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "shop"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I737:8424;705:6750;705:7029",
+    "text": "About",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "LEFT",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 119,
+      "pageY": 30.5,
+      "width": 34,
+      "height": 21,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 14,
+      "fontWeight": "700",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "About"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I737:8424;1776:37462;590:3669",
+    "text": "Label",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "LEFT",
+      "Pills",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 261,
+      "pageY": 29,
+      "width": 37,
+      "height": 24,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "Label"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I737:8424;705:8200;516:3895",
+    "text": "cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "Right",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 1212.5,
+      "pageY": 30.5,
+      "width": 27,
+      "height": 21,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 14,
+      "fontWeight": "700",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I2655:22794;503:2090;705:7029",
+    "text": "shop",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "LEFT",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 30.5,
+      "width": 27,
+      "height": 21,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 14,
+      "fontWeight": "700",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "shop"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I2655:22794;705:6750;705:7029",
+    "text": "About",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "LEFT",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 119,
+      "pageY": 30.5,
+      "width": 34,
+      "height": 21,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 14,
+      "fontWeight": "700",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "About"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I2655:22794;1776:37462;590:3669",
+    "text": "Label",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "LEFT",
+      "Pills",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 261,
+      "pageY": 29,
+      "width": 37,
+      "height": 24,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 16,
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(241, 242, 243, 1)",
+      "text": "Label"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I2655:22794;705:8200;516:3895",
+    "text": "cart",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Header",
+      "Header",
+      "Right",
+      "Button",
+      "Label"
+    ],
+    "styles": {
+      "pageX": 1212.5,
+      "pageY": 30.5,
+      "width": 27,
+      "height": 21,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 14,
+      "fontWeight": "700",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(255, 255, 255, 1)",
+      "text": "cart"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1017:5414;1017:5381",
+    "text": "subscribe.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Newsletter",
+      "Newsletter",
+      "subscribe."
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 5863.607421875,
+      "width": 403.5,
+      "height": 34,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 28,
+      "fontWeight": "900",
+      "lineHeight": "33.60000228881836px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "subscribe."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I975:9940;1017:5414;1017:5382;1015:5307",
+    "text": "@",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Newsletter",
+      "Newsletter",
+      "Subscribe field",
+      "text",
+      "@"
+    ],
+    "styles": {
+      "pageX": 36,
+      "pageY": 5947.607421875,
+      "width": 14,
+      "height": 24,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "@"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1017:5414;1017:5382;992:7593",
+    "text": "your email here",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Newsletter",
+      "Newsletter",
+      "Subscribe field",
+      "text",
+      "your email here"
+    ],
+    "styles": {
+      "pageX": 58,
+      "pageY": 5947.607421875,
+      "width": 107,
+      "height": 24,
+      "fontFamily": "Barlow",
+      "fontSize": 16,
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "your email here"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1017:5414;1017:5383",
+    "text": "We promise no spam. We barely email ourselves.",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Newsletter",
+      "We promise no spam. We barely email ourselves."
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 6001.607421875,
+      "width": 279,
+      "height": 42,
+      "fontFamily": "Barlow",
+      "fontSize": 14,
+      "fontWeight": "500",
+      "lineHeight": "21px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "We promise no spam. We barely email ourselves."
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I975:9940;468:2653",
+    "text": "shop",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "Shop",
+      "shop"
+    ],
+    "styles": {
+      "pageX": 543.5,
+      "pageY": 5863.607421875,
+      "width": 33,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "shop"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;468:2648",
+    "text": "Fortune cookie wisdom",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "Shop",
+      "Frame 114",
+      "Fortune cookie wisdom"
+    ],
+    "styles": {
+      "pageX": 543.5,
+      "pageY": 5893.607421875,
+      "width": 134,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Fortune cookie wisdom"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;468:2649",
+    "text": "Socially irreverent",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "Shop",
+      "Frame 114",
+      "Socially irreverent"
+    ],
+    "styles": {
+      "pageX": 543.5,
+      "pageY": 5919.607421875,
+      "width": 106,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Socially irreverent"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;468:2650",
+    "text": "Skull gear",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "Shop",
+      "Frame 114",
+      "Skull gear"
+    ],
+    "styles": {
+      "pageX": 543.5,
+      "pageY": 5945.607421875,
+      "width": 58,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Skull gear"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1010:4693",
+    "text": "Skull sport",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "Shop",
+      "Frame 114",
+      "Skull sport"
+    ],
+    "styles": {
+      "pageX": 543.5,
+      "pageY": 5971.607421875,
+      "width": 63,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Skull sport"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;468:2647",
+    "text": "Shop all",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "Shop",
+      "Frame 114",
+      "Shop all"
+    ],
+    "styles": {
+      "pageX": 543.5,
+      "pageY": 5997.607421875,
+      "width": 46,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Shop all"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1010:4665",
+    "text": "good to know",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "good to know",
+      "good to know"
+    ],
+    "styles": {
+      "pageX": 840,
+      "pageY": 5863.607421875,
+      "width": 96,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "700",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "good to know"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1010:4667",
+    "text": "Our Manifesto",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "good to know",
+      "Frame 114",
+      "Our Manifesto"
+    ],
+    "styles": {
+      "pageX": 840,
+      "pageY": 5893.607421875,
+      "width": 82,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Our Manifesto"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1996:40016",
+    "text": "Our story",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "good to know",
+      "Frame 114",
+      "Our story"
+    ],
+    "styles": {
+      "pageX": 840,
+      "pageY": 5919.607421875,
+      "width": 54,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Our story"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1126:12961",
+    "text": "Shipping & returns",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "good to know",
+      "Frame 114",
+      "Shipping & returns"
+    ],
+    "styles": {
+      "pageX": 840,
+      "pageY": 5945.607421875,
+      "width": 107,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "Shipping & returns"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;1010:4669",
+    "text": "FAQ",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Pages",
+      "good to know",
+      "Frame 114",
+      "FAQ"
+    ],
+    "styles": {
+      "pageX": 840,
+      "pageY": 5971.607421875,
+      "width": 23,
+      "height": 14,
+      "fontFamily": "Roboto Slab",
+      "fontSize": 12,
+      "fontWeight": "500",
+      "lineHeight": "14.40000057220459px",
+      "letterSpacing": "0px",
+      "color": "rgba(82, 89, 96, 1)",
+      "text": "FAQ"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": null,
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;992:7768",
+    "text": "contact us",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "Content",
+      "Contact us",
+      "Contact Us",
+      "contact us"
+    ],
+    "styles": {
+      "pageX": 1067,
+      "pageY": 5863.607421875,
+      "width": 193,
+      "height": 38,
+      "fontFamily": "Barlow",
+      "fontSize": 32,
+      "fontWeight": "500",
+      "lineHeight": "38.400001525878906px",
+      "letterSpacing": "-0.96px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "contact us"
+    },
+    "figmaTextAutoResize": "HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "informational"
+  },
+  {
+    "figmaNodeId": "I975:9940;427:7145",
+    "text": "Terms of service",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "other stuff",
+      "Terms of service"
+    ],
+    "styles": {
+      "pageX": 20,
+      "pageY": 6099.607421875,
+      "width": 69,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Terms of service"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;427:7143",
+    "text": "Privacy policy",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "other stuff",
+      "Privacy policy"
+    ],
+    "styles": {
+      "pageX": 416.3330078125,
+      "pageY": 6099.607421875,
+      "width": 59,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Privacy policy"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;468:2631",
+    "text": "Cookie preference",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "other stuff",
+      "Cookie preference"
+    ],
+    "styles": {
+      "pageX": 802.6669921875,
+      "pageY": 6099.607421875,
+      "width": 77,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Cookie preference"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  },
+  {
+    "figmaNodeId": "I975:9940;468:2633",
+    "text": "Legal Notice",
+    "figmaPath": [
+      "01. Home — Desktop 1280",
+      "Footer",
+      "other stuff",
+      "Legal Notice"
+    ],
+    "styles": {
+      "pageX": 1207,
+      "pageY": 6099.607421875,
+      "width": 53,
+      "height": 12,
+      "fontFamily": "Barlow",
+      "fontSize": 8,
+      "fontWeight": "700",
+      "lineHeight": "12px",
+      "letterSpacing": "0px",
+      "color": "rgba(23, 25, 28, 1)",
+      "text": "Legal Notice"
+    },
+    "figmaTextAutoResize": "WIDTH_AND_HEIGHT",
+    "figmaTextCase": "UPPER",
+    "widthComparisonMode": "strict"
+  }
+]

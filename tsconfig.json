@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "types": [
+      "node",
+      "@playwright/test"
+    ]
+  },
+  "include": [
+    "tests/**/*.ts",
+    "pages/**/*.ts",
+    "config/**/*.ts",
+    "utils/**/*.ts",
+    "figma/**/*.ts",
+    "comparison/**/*.ts",
+    "clickup/**/*.ts"
+  ]
+}

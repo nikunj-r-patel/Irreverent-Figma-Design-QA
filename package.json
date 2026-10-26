@@ -1,0 +1,31 @@
+{
+  "name": "paragon-figma-design-qa",
+  "version": "1.0.0",
+  "description": "Figma design QA automation framework for Paragon",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "audit:full": "playwright test tests/audit/initial-full-audit-orchestrator.spec.ts",
+    "audit:page": "playwright test tests/audit/page-audit-runner.spec.ts",
+    "audit:verify": "playwright test tests/audit/",
+    "figma:freeze": "playwright test tests/figma/figma-project-freezer.spec.ts",
+    "figma:refresh": "playwright test tests/figma/figma-refresh-offline-reference.spec.ts",
+    "clickup:sync": "playwright test tests/audit/clickup-sync-client.spec.ts",
+    "report:html": "playwright test tests/audit/bug-report-html-generator.spec.ts",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@figma/rest-api-spec": "^0.42.0",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^24.0.0",
+    "@types/pngjs": "^6.0.5",
+    "dotenv": "^17.4.2",
+    "figma-api": "^2.2.1-beta",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.0.0"
+  }
+}
