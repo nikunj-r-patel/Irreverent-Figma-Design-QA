@@ -16,6 +16,7 @@ const lines = fs.readFileSync(tsvPath, 'utf8').split(/\r?\n/).filter(Boolean);
 interface AuditRow {
   viewport: string;
   section: string;
+  subSection: string;
   category: string;
   elementName: string;
   figmaPath: string;
@@ -34,26 +35,26 @@ for (let i = 1; i < lines.length; i++) {
   rows.push({
     viewport: parts[0],
     section: parts[1],
-    category: parts[2],
-    elementName: parts[3],
-    figmaPath: parts[4],
-    status: parts[5],
-    expectedSpec: parts[6],
-    liveMeasuredSpec: parts[7],
-    difference: parts[8],
-    severity: parts[9],
-    rationale: parts[10],
-    userComment: parts[11] || '',
+    subSection: parts[2],
+    category: parts[3],
+    elementName: parts[4],
+    figmaPath: parts[5],
+    status: parts[6],
+    expectedSpec: parts[7],
+    liveMeasuredSpec: parts[8],
+    difference: parts[9],
+    severity: parts[10],
+    rationale: parts[11],
+    userComment: parts[12] || '',
   });
 }
 
 // Canonical display order of sections on the storefront:
 const canonicalSectionOrder = [
   'Header',
-  'Marquee 1: Top Announcement Bar',
   'HERO',
   'Featured',
-  'Marquee 2: Black Statement Marquee',
+  'marquee-black 1',
   'Collection',
   'About',
   'Categories',
@@ -61,43 +62,64 @@ const canonicalSectionOrder = [
   'Footer',
 ];
 
-// Group rows by section
-const sectionsMap = new Map<string, AuditRow[]>();
+// Group rows by Section -> SubSection
+const sectionsMap = new Map<string, Map<string, AuditRow[]>>();
 for (const r of rows) {
   if (!sectionsMap.has(r.section)) {
-    sectionsMap.set(r.section, []);
+    sectionsMap.set(r.section, new Map());
   }
-  sectionsMap.get(r.section)!.push(r);
+  const subMap = sectionsMap.get(r.section)!;
+  if (!subMap.has(r.subSection)) {
+    subMap.set(r.subSection, []);
+  }
+  subMap.get(r.subSection)!.push(r);
 }
 
-// Ensure all sections are ordered canonically
-const orderedSectionNames = [
-  ...canonicalSectionOrder.filter(s => sectionsMap.has(s)),
-  ...Array.from(sectionsMap.keys()).filter(s => !canonicalSectionOrder.includes(s)),
-];
+const orderedSectionNames = canonicalSectionOrder.filter(s => sectionsMap.has(s));
 
 const now = new Date().toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'short' });
 
 // Global layer-wise breakdown stats
 const globalLayerStats = new Map<string, number>();
+let totalPassedCount = 0;
+let totalDefectCount = 0;
+let totalSubpixelCount = 0;
+
 for (const r of rows) {
   globalLayerStats.set(r.category, (globalLayerStats.get(r.category) || 0) + 1);
+  const stUpper = r.status.toUpperCase();
+  if (stUpper.includes('DEFECT') || stUpper.includes('BUG')) {
+    totalDefectCount++;
+  } else if (stUpper.includes('SUBPIXEL')) {
+    totalSubpixelCount++;
+    totalPassedCount++;
+  } else {
+    totalPassedCount++;
+  }
 }
+
+const passRate = ((totalPassedCount / rows.length) * 100).toFixed(1);
 
 const globalLayerPills = Array.from(globalLayerStats.entries())
   .sort((a, b) => b[1] - a[1])
   .map(([cat, count]) => `<span class="stat-pill"><strong>${escapeHtml(cat)}:</strong> ${count}</span>`)
   .join('');
 
-// Build HTML for each section
+// Build HTML for each section and its nested sub-sections
 const sectionHtmlBlocks = orderedSectionNames.map((secName, sIdx) => {
-  const secRows = sectionsMap.get(secName)!;
-  const secTotal = secRows.length;
-
-  // Layer breakdown for this specific section
+  const subMap = sectionsMap.get(secName)!;
+  let secTotal = 0;
+  let secDefects = 0;
   const layerStats = new Map<string, number>();
-  for (const r of secRows) {
-    layerStats.set(r.category, (layerStats.get(r.category) || 0) + 1);
+
+  for (const [subName, subRows] of subMap.entries()) {
+    secTotal += subRows.length;
+    for (const r of subRows) {
+      layerStats.set(r.category, (layerStats.get(r.category) || 0) + 1);
+      if (r.status.toUpperCase().includes('DEFECT') || r.status.toUpperCase().includes('BUG')) {
+        secDefects++;
+      }
+    }
   }
 
   const layerPills = Array.from(layerStats.entries())
@@ -111,61 +133,97 @@ const sectionHtmlBlocks = orderedSectionNames.map((secName, sIdx) => {
     })
     .join(' ');
 
-  const tableRows = secRows.map((r, rIdx) => {
-    const isPassed = r.status.toUpperCase().includes('PASS');
-    const isCatalog = r.category.includes('Catalog Data') || r.category.includes('Dynamic Catalog');
-    const isDot = r.category.includes('Dot');
-    const isProgress = r.category.includes('Slider') || r.category.includes('Progress');
-    const badgeClass = isPassed ? (isCatalog ? 'badge-catalog' : 'badge-pass') : 'badge-defect';
-    const statusIcon = isPassed ? '✓' : '✗';
-    const commentKey = `comment_${r.section}_${rIdx}`;
+  // Render each sub-section within the section
+  const subSectionBlocks = Array.from(subMap.entries()).map(([subName, subRows], subIdx) => {
+    const tableRows = subRows.map((r, rIdx) => {
+      const stUpper = r.status.toUpperCase();
+      const isDefect = stUpper.includes('DEFECT') || stUpper.includes('BUG');
+      const isSubpixel = stUpper.includes('SUBPIXEL');
+      const isCatalog = r.category.includes('Catalog Data') || r.category.includes('Dynamic Catalog');
+      const isDot = r.category.includes('Dot');
+      const isProgress = r.category.includes('Slider') || r.category.includes('Progress');
+
+      let badgeClass = 'badge-pass';
+      let statusIcon = '✓';
+
+      if (isDefect) {
+        badgeClass = 'badge-defect';
+        statusIcon = '✗';
+      } else if (isSubpixel) {
+        badgeClass = 'badge-subpixel';
+        statusIcon = '≈';
+      } else if (isCatalog) {
+        badgeClass = 'badge-catalog';
+        statusIcon = '✓';
+      }
+
+      const commentKey = `comment_${r.section}_${r.subSection}_${rIdx}`;
+
+      return `
+        <tr class="audit-row ${isDefect ? 'row-defect' : ''} ${isDot ? 'row-dot' : ''} ${isProgress ? 'row-progress' : ''} ${isCatalog ? 'row-catalog' : ''}">
+          <td><span class="status-badge ${badgeClass}">${statusIcon} ${escapeHtml(r.status)}</span></td>
+          <td><span class="type-pill">${escapeHtml(r.category)}</span></td>
+          <td>
+            <strong class="elem-title">${escapeHtml(r.elementName)}</strong>
+            <div class="elem-path">${escapeHtml(r.figmaPath)}</div>
+          </td>
+          <td><div class="spec-bubble exp-bubble">${escapeHtml(r.expectedSpec)}</div></td>
+          <td><div class="spec-bubble act-bubble ${isDefect ? 'act-bubble-defect' : ''}">${escapeHtml(r.liveMeasuredSpec)}</div></td>
+          <td>
+            <div class="diff-tag ${isDefect ? 'diff-tag-defect' : ''}">${escapeHtml(r.difference)}</div>
+            <div class="rationale-text">${escapeHtml(r.rationale)}</div>
+          </td>
+          <td><input type="text" class="comment-input" data-key="${commentKey}" placeholder="Feedback..." value="${escapeHtml(r.userComment)}" /></td>
+        </tr>
+      `;
+    }).join('\n');
 
     return `
-      <tr class="audit-row ${isDot ? 'row-dot' : ''} ${isProgress ? 'row-progress' : ''} ${isCatalog ? 'row-catalog' : ''}">
-        <td><span class="status-badge ${badgeClass}">${statusIcon} ${escapeHtml(r.status)}</span></td>
-        <td><span class="type-pill">${escapeHtml(r.category)}</span></td>
-        <td>
-          <strong class="elem-title">${escapeHtml(r.elementName)}</strong>
-          <div class="elem-path">${escapeHtml(r.figmaPath)}</div>
-        </td>
-        <td><div class="spec-bubble exp-bubble">${escapeHtml(r.expectedSpec)}</div></td>
-        <td><div class="spec-bubble act-bubble">${escapeHtml(r.liveMeasuredSpec)}</div></td>
-        <td><div class="rationale-text">${escapeHtml(r.rationale)}</div></td>
-        <td><input type="text" class="comment-input" data-key="${commentKey}" placeholder="Feedback..." value="${escapeHtml(r.userComment)}" /></td>
-      </tr>
+      <div class="subsection-wrapper">
+        <div class="subsection-header">
+          <span class="sub-tree-icon">↳</span>
+          <span class="sub-label">Figma Sub-Section:</span>
+          <h3 class="sub-title">${escapeHtml(subName)}</h3>
+          <span class="sub-count-badge">${subRows.length} Elements</span>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 130px;">Strict Status</th>
+                <th style="width: 150px;">Layer Category</th>
+                <th style="min-width: 250px;">Element / Figma Layer Path</th>
+                <th style="min-width: 300px;">Figma Artboard Specs (Padding, Margin, Border)</th>
+                <th style="min-width: 300px;">Live Preview Rendered Computed CSS</th>
+                <th style="min-width: 260px;">Strict 1–2px Discrepancy &amp; Root Cause Analysis</th>
+                <th style="min-width: 160px;">QA Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${tableRows}
+            </tbody>
+          </table>
+        </div>
+      </div>
     `;
   }).join('\n');
 
   return `
     <section class="section-block" id="section-${sIdx + 1}">
-      <div class="section-header">
+      <div class="section-header ${secDefects > 0 ? 'sec-has-defects' : ''}">
         <div class="sec-title-wrap">
           <span class="sec-index">0${sIdx + 1}</span>
           <h2 class="sec-title">${escapeHtml(secName)}</h2>
           <span class="sec-total-badge">${secTotal} Elements</span>
+          ${secDefects > 0 ? `<span class="sec-defect-badge">⚠️ ${secDefects} Developer Defect${secDefects > 1 ? 's' : ''}</span>` : `<span class="sec-clean-badge">✓ Strict 1:1 Clean</span>`}
         </div>
         <div class="sec-layers-summary">
           <div class="sec-layer-label">Layer Breakdown:</div>
           <div class="sec-layer-pills">${layerPills}</div>
         </div>
       </div>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 105px;">Status</th>
-              <th style="width: 150px;">Layer Category</th>
-              <th style="min-width: 260px;">Element / Figma Layer Path</th>
-              <th style="min-width: 290px;">Figma Artboard Specs &amp; Measurements</th>
-              <th style="min-width: 290px;">Live Preview Rendered Measurements</th>
-              <th style="min-width: 240px;">10-Year Human QA Verification Rationale</th>
-              <th style="min-width: 180px;">Reviewer Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${tableRows}
-          </tbody>
-        </table>
+      <div class="subsections-container">
+        ${subSectionBlocks}
       </div>
     </section>
   `;
@@ -176,7 +234,7 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desktop 1280px — Section-Wise &amp; Layer-Wise Exact Measurements Audit</title>
+  <title>Desktop 1280px — Strict 1:1 Figma Section &amp; Sub-Section QA Audit</title>
   <style>
     :root {
       --bg: #070a10;
@@ -194,7 +252,7 @@ const html = `<!DOCTYPE html>
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--text-main); font-family: var(--font); padding: 32px 24px 80px; line-height: 1.5; }
-    .container { max-width: 1720px; margin: 0 auto; }
+    .container { max-width: 1780px; margin: 0 auto; }
     
     .header {
       background: linear-gradient(135deg, #131b2e 0%, #0d121c 100%);
@@ -289,6 +347,10 @@ const html = `<!DOCTYPE html>
       flex-direction: column;
       gap: 12px;
     }
+    .sec-has-defects {
+      border-left: 4px solid var(--danger);
+      background: linear-gradient(90deg, #1c141d 0%, #101623 100%);
+    }
     .sec-title-wrap {
       display: flex;
       align-items: center;
@@ -314,6 +376,24 @@ const html = `<!DOCTYPE html>
     .sec-total-badge {
       background: #1f6feb;
       color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .sec-defect-badge {
+      background: rgba(248, 81, 73, 0.15);
+      color: #ff7b72;
+      border: 1px solid rgba(248, 81, 73, 0.4);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .sec-clean-badge {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--success);
+      border: 1px solid rgba(63, 185, 80, 0.3);
       font-size: 12px;
       font-weight: 800;
       padding: 3px 10px;
@@ -352,6 +432,59 @@ const html = `<!DOCTYPE html>
     .pill-dot { color: #56d364; background: rgba(86, 211, 100, 0.1); border-color: rgba(86, 211, 100, 0.3); }
     .pill-progress { color: #ff7b72; background: rgba(249, 2, 2, 0.12); border-color: rgba(249, 2, 2, 0.4); }
 
+    /* Sub-section hierarchy styles */
+    .subsections-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 16px 0;
+    }
+    .subsection-wrapper {
+      border-top: 1px solid var(--card-border);
+      padding-top: 14px;
+    }
+    .subsection-wrapper:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+    .subsection-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 24px 12px;
+      background: rgba(255,255,255,0.015);
+    }
+    .sub-tree-icon {
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .sub-label {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sub-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #79c0ff;
+      background: rgba(88, 166, 255, 0.1);
+      border: 1px solid rgba(88, 166, 255, 0.25);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: ui-monospace, monospace;
+    }
+    .sub-count-badge {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--card-inner);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--card-border);
+    }
+
     .table-container { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     th {
@@ -370,12 +503,15 @@ const html = `<!DOCTYPE html>
     td { padding: 12px 14px; border-bottom: 1px solid rgba(48, 54, 61, 0.4); vertical-align: top; }
     tr:hover { background: rgba(255,255,255,0.02); }
 
+    .row-defect { background: rgba(248, 81, 73, 0.06); }
     .row-dot { background: rgba(86, 211, 100, 0.04); }
     .row-progress { background: rgba(249, 2, 2, 0.05); }
     .row-catalog { background: rgba(163, 113, 247, 0.04); }
 
     .status-badge { display: inline-block; font-size: 11px; font-weight: 800; padding: 4px 8px; border-radius: 6px; }
     .badge-pass { background: rgba(63, 185, 80, 0.15); color: var(--success); border: 1px solid rgba(63, 185, 80, 0.3); }
+    .badge-subpixel { background: rgba(210, 153, 34, 0.15); color: #e3b341; border: 1px solid rgba(210, 153, 34, 0.4); }
+    .badge-defect { background: rgba(248, 81, 73, 0.2); color: #ff7b72; border: 1px solid rgba(248, 81, 73, 0.5); font-weight: 900; }
     .badge-catalog { background: rgba(163, 113, 247, 0.15); color: #d2a8ff; border: 1px solid rgba(163, 113, 247, 0.35); }
     .type-pill { font-size: 11px; color: #8fa0b8; background: #131b26; border: 1px solid var(--card-border); padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
 
@@ -384,6 +520,9 @@ const html = `<!DOCTYPE html>
     .spec-bubble { background: #080d14; border: 1px solid var(--card-border); border-radius: 6px; padding: 8px 10px; font-size: 11px; line-height: 1.45; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
     .exp-bubble { color: #7ee787; border-color: rgba(63, 185, 80, 0.25); }
     .act-bubble { color: #58a6ff; border-color: rgba(88, 166, 255, 0.25); }
+    .act-bubble-defect { color: #ff7b72; border-color: rgba(248, 81, 73, 0.4); background: #180d12; }
+    .diff-tag { font-size: 11px; font-weight: 700; color: #d29922; margin-bottom: 6px; line-height: 1.35; }
+    .diff-tag-defect { color: #ff7b72; font-weight: 800; }
     .rationale-text { font-size: 12px; color: #c9d1d9; line-height: 1.45; }
     .comment-input { width: 100%; background: #080d14; border: 1px solid var(--card-border); border-radius: 6px; color: #f0f6fc; padding: 6px 8px; font-size: 12px; outline: none; }
     .comment-input:focus { border-color: var(--primary); }
@@ -393,8 +532,8 @@ const html = `<!DOCTYPE html>
   <div class="container">
     <header class="header">
       <div>
-        <h1>Desktop (1280px) Section-Wise &amp; Layer-Wise Exact Measurements Audit</h1>
-        <div class="header-sub">Every Figma Layer Measured &amp; Verified Against Live Preview &bull; Width, Height, Padding, Margin, Radius, Gap, Background, Full Stops &amp; Progress Bars &bull; ${now}</div>
+        <h1>Desktop (1280px) Exact Figma Section &amp; Sub-Section QA Audit</h1>
+        <div class="header-sub">Strict 1:1 Figma Top-to-Bottom Sequence &bull; Sub-Section Visual Hierarchy &bull; 1–2px Measurement Threshold &bull; ${now}</div>
       </div>
       <div>
         <a href="qa-audit-desktop-1280-exact-measurements.tsv" class="btn-download" download>📥 Download Clean TSV (Excel Ready)</a>
@@ -403,10 +542,10 @@ const html = `<!DOCTYPE html>
 
     <div class="kpi-row">
       <div class="kpi-card"><div class="kpi-val" style="color:var(--primary);">${rows.length}</div><div class="kpi-lbl">Total Tested Elements</div></div>
-      <div class="kpi-card"><div class="kpi-val" style="color:var(--success);">${orderedSectionNames.length}</div><div class="kpi-lbl">Storefront Sections</div></div>
+      <div class="kpi-card"><div class="kpi-val" style="color:${totalDefectCount > 0 ? '#ff7b72' : 'var(--success)'};">${totalDefectCount}</div><div class="kpi-lbl">Developer Layout Defects (>2px)</div></div>
+      <div class="kpi-card"><div class="kpi-val" style="color:#e3b341;">${totalSubpixelCount}</div><div class="kpi-lbl">Passed w/ Subpixel Note (≤2px)</div></div>
       <div class="kpi-card"><div class="kpi-val" style="color:#d2a8ff;">44</div><div class="kpi-lbl">Dynamic Catalog Items (Cleaned)</div></div>
-      <div class="kpi-card"><div class="kpi-val" style="color:#f90202;">4</div><div class="kpi-lbl">Progress Bars &amp; Lines Verified</div></div>
-      <div class="kpi-card"><div class="kpi-val" style="color:var(--success);">100%</div><div class="kpi-lbl">Senior QA Pass Rate</div></div>
+      <div class="kpi-card"><div class="kpi-val" style="color:var(--success);">${passRate}%</div><div class="kpi-lbl">Strict 1:1 QA Pass Rate</div></div>
     </div>
 
     <div class="global-stats-card">
@@ -418,7 +557,16 @@ const html = `<!DOCTYPE html>
 
     <nav class="section-nav">
       <span style="font-size:12px; color:var(--text-muted); align-self:center; font-weight:700; margin-right:4px;">JUMP TO:</span>
-      ${orderedSectionNames.map((s, idx) => `<a href="#section-${idx + 1}" class="nav-chip">0${idx + 1}. ${escapeHtml(s)} (${sectionsMap.get(s)!.length})</a>`).join(' ')}
+      ${orderedSectionNames.map((s, idx) => {
+        const subMap = sectionsMap.get(s)!;
+        let count = 0;
+        let defects = 0;
+        for (const subRows of subMap.values()) {
+          count += subRows.length;
+          defects += subRows.filter(r => r.status.toUpperCase().includes('DEFECT') || r.status.toUpperCase().includes('BUG')).length;
+        }
+        return `<a href="#section-${idx + 1}" class="nav-chip">0${idx + 1}. ${escapeHtml(s)} (${count})${defects > 0 ? ` <span style="color:#ff7b72; font-weight:800;">[${defects} ⚠️]</span>` : ''}</a>`;
+      }).join(' ')}
     </nav>
 
     <main>
@@ -430,4 +578,4 @@ const html = `<!DOCTYPE html>
 
 const htmlPath = 'reports/audit/human-qa-report-desktop-1280-exact.html';
 fs.writeFileSync(htmlPath, html, 'utf8');
-console.log('Successfully generated section-wise and layer-wise HTML report at:', htmlPath);
+console.log('Successfully generated strict 1:1 sub-section HTML report at:', htmlPath);
