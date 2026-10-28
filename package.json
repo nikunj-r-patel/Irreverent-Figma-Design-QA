@@ -23,6 +23,7 @@
     "@types/node": "^24.0.0",
     "@types/pngjs": "^6.0.5",
     "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
     "figma-api": "^2.2.1-beta",
     "pixelmatch": "^7.2.0",
     "pngjs": "^7.0.0",
