@@ -159,6 +159,33 @@ const sectionHtmlBlocks = orderedSectionNames.map((secName, sIdx) => {
 
       const commentKey = `comment_${r.section}_${r.subSection}_${rIdx}`;
 
+      let screenshotEvidenceHtml = '';
+      if (r.elementName === 'Reviews Section Container' && isDefect) {
+        screenshotEvidenceHtml = `
+          <div style="margin-top:10px; padding:10px; background:#0b111a; border:1px solid #ff7b72; border-radius:8px;">
+            <div style="font-size:11px; font-weight:800; color:#ff7b72; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+              <span>🔍 REAL CHROME DEVTOOLS EVIDENCE (COMPUTED BOX MODEL):</span>
+              <a href="screenshots/defect-1-reviews-padding-overshoot.png" target="_blank" style="color:#58a6ff; text-decoration:underline;">Open Full Resolution ↗</a>
+            </div>
+            <a href="screenshots/defect-1-reviews-padding-overshoot.png" target="_blank">
+              <img src="screenshots/defect-1-reviews-padding-overshoot.png" style="width:100%; max-width:850px; border-radius:6px; border:1px solid #30363d; display:block;" alt="DevTools Computed Evidence - Reviews Padding Overshoot" />
+            </a>
+          </div>
+        `;
+      } else if (r.section === 'Categories' && r.category === 'Section Box Model' && isDefect) {
+        screenshotEvidenceHtml = `
+          <div style="margin-top:10px; padding:10px; background:#0b111a; border:1px solid #ff7b72; border-radius:8px;">
+            <div style="font-size:11px; font-weight:800; color:#ff7b72; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+              <span>🔍 REAL CHROME DEVTOOLS EVIDENCE (STYLES & EXPANDED DOM SUBSECTIONS):</span>
+              <a href="screenshots/defect-2-merged-categories-wrapper.png" target="_blank" style="color:#58a6ff; text-decoration:underline;">Open Full Resolution ↗</a>
+            </div>
+            <a href="screenshots/defect-2-merged-categories-wrapper.png" target="_blank">
+              <img src="screenshots/defect-2-merged-categories-wrapper.png" style="width:100%; max-width:850px; border-radius:6px; border:1px solid #30363d; display:block;" alt="DevTools Styles Evidence - Merged Categories Wrapper" />
+            </a>
+          </div>
+        `;
+      }
+
       return `
         <tr class="audit-row ${isDefect ? 'row-defect' : ''} ${isDot ? 'row-dot' : ''} ${isProgress ? 'row-progress' : ''} ${isCatalog ? 'row-catalog' : ''}">
           <td><span class="status-badge ${badgeClass}">${statusIcon} ${escapeHtml(r.status)}</span></td>
@@ -166,6 +193,7 @@ const sectionHtmlBlocks = orderedSectionNames.map((secName, sIdx) => {
           <td>
             <strong class="elem-title">${escapeHtml(r.elementName)}</strong>
             <div class="elem-path">${escapeHtml(r.figmaPath)}</div>
+            ${screenshotEvidenceHtml}
           </td>
           <td><div class="spec-bubble exp-bubble">${escapeHtml(r.expectedSpec)}</div></td>
           <td><div class="spec-bubble act-bubble ${isDefect ? 'act-bubble-defect' : ''}">${escapeHtml(r.liveMeasuredSpec)}</div></td>
