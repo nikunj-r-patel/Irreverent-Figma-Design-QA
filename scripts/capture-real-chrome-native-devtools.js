@@ -25,11 +25,22 @@ async function captureAuthenticRealDevToolsDefects() {
   await page.goto('https://www.irreverentink.com/?preview_theme_id=181104476407', { waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(4000);
 
-  // Suppress popups
+  // Suppress popups persistently
   await page.evaluate(() => {
     const s = document.createElement('style');
     s.id = 'suppress-popups';
-    s.innerHTML = '#shopify-pc__banner, .shopify-pc__banner__dialog, #PBarNextFrameWrapper, #preview-bar-iframe { display: none !important; }';
+    s.innerHTML = `
+      #shopify-pc__banner,
+      .shopify-pc__banner__dialog,
+      #PBarNextFrameWrapper,
+      #preview-bar-iframe,
+      .shopify-preview-bar,
+      [aria-label*="cookie" i],
+      [class*="cookie" i] {
+        display: none !important;
+        visibility: hidden !important;
+      }
+    `;
     document.head.appendChild(s);
   });
 
@@ -187,7 +198,7 @@ async function captureAuthenticRealDevToolsDefects() {
     redBox.style.boxShadow = '0 0 10px rgba(255, 51, 51, 0.6)';
     overlay.appendChild(redBox);
 
-    // 2. Comprehensive Root Cause Defect Card (placed cleanly at left edge of DevTools pane, clear of DOM tree)
+    // 2. Comprehensive Root Cause Defect Card
     const defectCard = document.createElement('div');
     defectCard.style.position = 'absolute';
     defectCard.style.left = '1480px';
@@ -202,7 +213,7 @@ async function captureAuthenticRealDevToolsDefects() {
     defectCard.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     defectCard.style.color = '#e0e0e0';
     defectCard.style.fontSize = '11px';
-    defectCard.style.lineHeight = '1.5';
+    defectCard.lineHeight = '1.5';
 
     defectCard.innerHTML = `
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; font-weight:700; color:#ff6666;">
@@ -241,9 +252,9 @@ async function captureAuthenticRealDevToolsDefects() {
 
   // =========================================================================
   // DEFECT 2: CATEGORIES SECTION ARCHITECTURE MERGE / STYLES VIEW
-  // View: REAL DEVTOOLS STYLES TAB + PREVIEW ARCHITECTURE HIGHLIGHT + ROOT CAUSE CARD
+  // View: REAL DEVTOOLS WITH BOTH HERO & GRID SUBSECTIONS EXPANDED IN DOM TREE
   // =========================================================================
-  console.log('\n--- Capturing Defect 2: Categories with Real DevTools Styles Tab & Root Cause Card ---');
+  console.log('\n--- Capturing Defect 2: Categories with Expanded Subsections in DOM Tree & Styles Tab ---');
 
   // Remove Defect 1 overlay
   await dtPage.evaluate(() => {
@@ -251,7 +262,7 @@ async function captureAuthenticRealDevToolsDefects() {
     if (ov) ov.remove();
   });
 
-  // Scroll live page to categories section and inject clean container boundary highlight on preview
+  // Scroll live page to categories section and highlight outline without injecting DOM children
   await page.evaluate(() => {
     const existingPad = document.getElementById('devtools-padding-overlay');
     if (existingPad) existingPad.remove();
@@ -259,39 +270,8 @@ async function captureAuthenticRealDevToolsDefects() {
     const feat = document.querySelector('section.feature-collections-wrapper');
     if (feat) {
       feat.scrollIntoView({ behavior: 'instant', block: 'center' });
-
-      const existing = document.getElementById('devtools-categories-overlay');
-      if (existing) existing.remove();
-
-      const overlay = document.createElement('div');
-      overlay.id = 'devtools-categories-overlay';
-      overlay.style.position = 'absolute';
-      overlay.style.left = '16px';
-      overlay.style.top = '16px';
-      overlay.style.right = '16px';
-      overlay.style.bottom = '16px';
-      overlay.style.border = '2px dashed #d32f2f';
-      overlay.style.backgroundColor = 'rgba(211, 47, 47, 0.04)';
-      overlay.style.pointerEvents = 'none';
-      overlay.style.zIndex = '99999';
-
-      const tag = document.createElement('span');
-      tag.style.position = 'absolute';
-      tag.style.top = '12px';
-      tag.style.left = '16px';
-      tag.style.background = '#d32f2f';
-      tag.style.color = '#ffffff';
-      tag.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-      tag.style.fontSize = '12px';
-      tag.style.fontWeight = 'bold';
-      tag.style.padding = '4px 10px';
-      tag.style.borderRadius = '4px';
-      tag.style.boxShadow = '0 2px 4px rgba(0,0,0,0.5)';
-      tag.innerText = 'Merged Container: .feature-collections-wrapper';
-      overlay.appendChild(tag);
-
-      feat.style.position = 'relative';
-      feat.appendChild(overlay);
+      feat.style.outline = '3px dashed #d32f2f';
+      feat.style.outlineOffset = '-3px';
     }
   });
   await dtPage.waitForTimeout(1000);
@@ -309,7 +289,13 @@ async function captureAuthenticRealDevToolsDefects() {
   await dtPage.keyboard.press('ArrowRight');
   await dtPage.waitForTimeout(500);
   await dtPage.keyboard.press('ArrowDown');
-  await dtPage.waitForTimeout(600);
+  await dtPage.waitForTimeout(500);
+
+  // EXPAND <div class="feature-collections..."> TO REVEAL BOTH SUBSECTIONS:
+  // 1. <div class="feature-collections__hero">
+  // 2. <div class="feature-collections__grid">
+  await dtPage.keyboard.press('ArrowRight');
+  await dtPage.waitForTimeout(1000);
 
   // Click Styles Tab via mouse
   const stylesTabCoords = await dtPage.evaluate(() => {
@@ -334,7 +320,9 @@ async function captureAuthenticRealDevToolsDefects() {
   }
   await dtPage.waitForTimeout(2000);
 
-  // Dynamically find coordinates of element.style rules block in DevTools Styles Pane
+  // Dynamically find coordinates for:
+  // 1. The two subsections in the Elements DOM tree (hero & grid)
+  // 2. The element.style block in the Styles Pane
   const defect2Coords = await dtPage.evaluate(() => {
     function queryDeep(root, selector) {
       let matches = Array.from(root.querySelectorAll(selector));
@@ -344,12 +332,22 @@ async function captureAuthenticRealDevToolsDefects() {
       }
       return matches;
     }
+    const nodes = queryDeep(document, '.elements-tree-outline li');
+    const heroNode = nodes.find(n => n.innerText && n.innerText.includes('feature-collections__hero'));
+    const gridNode = nodes.find(n => n.innerText && n.innerText.includes('feature-collections__grid'));
+
     const blocks = queryDeep(document, '.matched-styles .style-pane-wrapper, .styles-section');
     const elStyleBlock = blocks.find(b => b.innerText && b.innerText.includes('element.style'));
-    return { elStyleRect: elStyleBlock ? elStyleBlock.getBoundingClientRect() : null };
-  });
 
-  // Inject QA Defect Card and Arrow for Defect 2
+    return {
+      heroRect: heroNode ? heroNode.getBoundingClientRect() : null,
+      gridRect: gridNode ? gridNode.getBoundingClientRect() : null,
+      elStyleRect: elStyleBlock ? elStyleBlock.getBoundingClientRect() : null
+    };
+  });
+  console.log('Defect 2 Clean DOM Tree and Styles Coords:', defect2Coords);
+
+  // Inject QA Callouts: Highlighting BOTH Hero & Grid in the DOM tree, Styles Pane, and Defect Card
   await dtPage.evaluate((coords) => {
     const existing = document.getElementById('qa-defect-overlay');
     if (existing) existing.remove();
@@ -364,26 +362,72 @@ async function captureAuthenticRealDevToolsDefects() {
     overlay.style.pointerEvents = 'none';
     overlay.style.zIndex = '99999999';
 
-    const sRect = (coords && coords.elStyleRect) ? coords.elStyleRect : { x: 1501, y: 830, width: 299, height: 233 };
+    // 1. Preview Screencast Tag
+    const previewTag = document.createElement('div');
+    previewTag.style.position = 'absolute';
+    previewTag.style.left = '52px';
+    previewTag.style.top = '98px';
+    previewTag.style.background = '#d32f2f';
+    previewTag.style.color = '#ffffff';
+    previewTag.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    previewTag.style.fontSize = '12px';
+    previewTag.style.fontWeight = 'bold';
+    previewTag.style.padding = '4px 12px';
+    previewTag.style.borderRadius = '4px';
+    previewTag.style.boxShadow = '0 2px 6px rgba(0,0,0,0.5)';
+    previewTag.innerText = 'Merged Container: .feature-collections-wrapper (Hero + Grid combined)';
+    overlay.appendChild(previewTag);
 
-    // 1. Red highlight around live theme element style variables / gap & architecture
+    // 2. Highlight BOTH Subsections in the Real DevTools Elements Tree
+    const hRect = (coords && coords.heroRect) ? coords.heroRect : { x: 1563, y: 555, width: 237, height: 34 };
+    const gRect = (coords && coords.gridRect) ? coords.gridRect : { x: 1563, y: 588, width: 237, height: 34 };
+
+    const treeHighlight = document.createElement('div');
+    treeHighlight.style.position = 'absolute';
+    treeHighlight.style.left = `${Math.min(hRect.x, gRect.x) - 4}px`;
+    treeHighlight.style.top = `${hRect.y - 2}px`;
+    treeHighlight.style.width = `${Math.max(hRect.width, gRect.width) + 8}px`;
+    treeHighlight.style.height = `${(gRect.y + gRect.height) - hRect.y + 4}px`;
+    treeHighlight.style.border = '2px solid #ff3333';
+    treeHighlight.style.borderRadius = '4px';
+    treeHighlight.style.backgroundColor = 'rgba(255, 51, 51, 0.12)';
+    treeHighlight.style.boxShadow = '0 0 10px rgba(255, 51, 51, 0.5)';
+    overlay.appendChild(treeHighlight);
+
+    // Callout label next to the tree highlight
+    const treeLabel = document.createElement('div');
+    treeLabel.style.position = 'absolute';
+    treeLabel.style.right = '14px';
+    treeLabel.style.top = `${hRect.y - 26}px`;
+    treeLabel.style.background = '#d32f2f';
+    treeLabel.style.color = '#ffffff';
+    treeLabel.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    treeLabel.style.fontSize = '11px';
+    treeLabel.style.fontWeight = 'bold';
+    treeLabel.style.padding = '3px 8px';
+    treeLabel.style.borderRadius = '3px';
+    treeLabel.style.boxShadow = '0 2px 6px rgba(0,0,0,0.5)';
+    treeLabel.innerHTML = 'Merged Subsections: __hero + __grid';
+    overlay.appendChild(treeLabel);
+
+    // 3. Highlight Styles Pane variables
+    const sRect = (coords && coords.elStyleRect) ? coords.elStyleRect : { x: 1501, y: 830, width: 299, height: 233 };
     const redBox = document.createElement('div');
     redBox.style.position = 'absolute';
     redBox.style.left = `${sRect.x + 6}px`;
     redBox.style.top = `${sRect.y + 4}px`;
     redBox.style.width = `${sRect.width - 12}px`;
     redBox.style.height = `${sRect.height - 8}px`;
-    redBox.style.border = '2.5px solid #ff3333';
+    redBox.style.border = '2px solid #ff3333';
     redBox.style.borderRadius = '4px';
     redBox.style.backgroundColor = 'rgba(255, 51, 51, 0.08)';
-    redBox.style.boxShadow = '0 0 10px rgba(255, 51, 51, 0.5)';
     overlay.appendChild(redBox);
 
-    // 2. Comprehensive Root Cause Defect Card (placed cleanly at left edge of DevTools pane, clear of DOM tree)
+    // 4. Comprehensive Root Cause Defect Card
     const defectCard = document.createElement('div');
     defectCard.style.position = 'absolute';
     defectCard.style.left = '1480px';
-    defectCard.style.top = '560px';
+    defectCard.style.top = '660px';
     defectCard.style.width = '300px';
     defectCard.style.background = '#252526';
     defectCard.style.border = '1px solid #d32f2f';
@@ -401,14 +445,19 @@ async function captureAuthenticRealDevToolsDefects() {
         <span style="font-size:11.5px;">DEFECT ANALYSIS</span>
         <span style="background:#d32f2f; color:#fff; padding:2px 6px; border-radius:3px; font-size:10px;">Merged Architecture</span>
       </div>
-      <div><strong>Figma Architecture:</strong> 2 distinct section containers with <code>64px</code> gap</div>
-      <div><strong>Live Storefront:</strong> Merged continuous wrapper <code>.feature-collections-wrapper</code></div>
+      <div><strong>Figma Architecture:</strong> 2 distinct section containers separated by <code>64px</code> gap</div>
+      <div><strong>Live Storefront:</strong> Merged into single wrapper containing:
+        <ul style="margin-left:14px; margin-top:2px;">
+          <li><code>.feature-collections__hero</code> (Manifesto)</li>
+          <li><code>.feature-collections__grid</code> (Categories)</li>
+        </ul>
+      </div>
       <div style="margin-top:4px;"><strong>Culprit Properties:</strong> <code style="background:#1e1e1e; color:#9cdcfe; padding:2px 4px; border-radius:3px; font-size:10px;">--feature-content-gap: 120px; --feature-bg-overlap: 0px;</code></div>
-      <div style="color:#aaa; font-size:10px; margin-top:3px;">Collapses design modularity & vertical rhythm</div>
+      <div style="color:#aaa; font-size:10px; margin-top:3px;">Collapses modularity and breaks design separation</div>
     `;
     overlay.appendChild(defectCard);
 
-    // 3. Red Arrow starting from preview section (x: 550, y: 550) pointing directly to Styles pane
+    // 5. Red Pointer Arrow from preview container directly to the merged tree nodes
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('style', 'position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;');
     svg.innerHTML = `
@@ -418,7 +467,7 @@ async function captureAuthenticRealDevToolsDefects() {
         </marker>
       </defs>
       <circle cx="550" cy="550" r="4.5" fill="#ff3333" />
-      <path d="M 550 550 C 850 580, 1180 720, ${sRect.x - 8} ${sRect.y + sRect.height / 2}" fill="none" stroke="#ff3333" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#qa-arrow-2)" />
+      <path d="M 550 550 C 950 530, 1250 560, ${hRect.x - 8} ${hRect.y + (gRect.y + gRect.height - hRect.y) / 2}" fill="none" stroke="#ff3333" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#qa-arrow-2)" />
     `;
     overlay.appendChild(svg);
 
