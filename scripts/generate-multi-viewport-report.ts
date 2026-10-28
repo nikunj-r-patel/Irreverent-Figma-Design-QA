@@ -16,11 +16,29 @@ async function run() {
   console.log('--- Generating Comprehensive Multi-Viewport Human QA Audit ---');
 
   // 1. Build items for all 3 viewports
-  const desktopItems = buildAuditedItemsForViewport(
-    'Desktop (1280px)',
-    'reports/audit/figma-desktop-complete-catalog.json',
-    'reports/audit/hierarchical-human-qa-report-desktop-1280.json'
-  );
+  // Load the exact 402 items directly from the verified 1280 TSV
+  const desktopTsvLines = fs.readFileSync('reports/audit/qa-audit-desktop-1280-exact-measurements.tsv', 'utf8')
+    .split(/\r?\n/)
+    .filter(Boolean);
+
+  const desktopItems: AuditItem[] = [];
+  for (let i = 1; i < desktopTsvLines.length; i++) {
+    const parts = desktopTsvLines[i].split('\t');
+    desktopItems.push({
+      viewport: parts[0],
+      section: parts[1],
+      category: parts[3],
+      elementName: parts[4],
+      figmaPath: parts[5],
+      status: parts[6],
+      expectedSpec: parts[7],
+      liveMeasuredSpec: parts[8],
+      difference: parts[9],
+      severity: parts[10],
+      rationale: parts[11],
+      userComment: parts[12] || '',
+    });
+  }
 
   const tabletItems = buildAuditedItemsForViewport(
     'Tablet (744px)',
@@ -113,6 +131,33 @@ async function run() {
         .map(p => escapeHtml(p.trim()))
         .join(' <span class="bc-sep">&gt;</span> ');
 
+      let screenshotEvidenceHtml = '';
+      if (r.elementName === 'Reviews Section Container' && !isPassed) {
+        screenshotEvidenceHtml = `
+          <div style="margin-top:10px; padding:10px; background:#0b111a; border:1px solid #ff7b72; border-radius:8px;">
+            <div style="font-size:11px; font-weight:800; color:#ff7b72; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+              <span>🔍 REAL CHROME DEVTOOLS EVIDENCE (COMPUTED BOX MODEL):</span>
+              <a href="screenshots/defect-1-reviews-padding-overshoot.png" target="_blank" style="color:#58a6ff; text-decoration:underline;">Open Full Resolution ↗</a>
+            </div>
+            <a href="screenshots/defect-1-reviews-padding-overshoot.png" target="_blank">
+              <img src="screenshots/defect-1-reviews-padding-overshoot.png" style="width:100%; max-width:850px; border-radius:6px; border:1px solid #30363d; display:block;" alt="DevTools Computed Evidence - Reviews Padding Overshoot" />
+            </a>
+          </div>
+        `;
+      } else if (r.section === 'Categories' && r.category === 'Section Box Model' && !isPassed) {
+        screenshotEvidenceHtml = `
+          <div style="margin-top:10px; padding:10px; background:#0b111a; border:1px solid #ff7b72; border-radius:8px;">
+            <div style="font-size:11px; font-weight:800; color:#ff7b72; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+              <span>🔍 REAL CHROME DEVTOOLS EVIDENCE (STYLES & EXPANDED DOM SUBSECTIONS):</span>
+              <a href="screenshots/defect-2-merged-categories-wrapper.png" target="_blank" style="color:#58a6ff; text-decoration:underline;">Open Full Resolution ↗</a>
+            </div>
+            <a href="screenshots/defect-2-merged-categories-wrapper.png" target="_blank">
+              <img src="screenshots/defect-2-merged-categories-wrapper.png" style="width:100%; max-width:850px; border-radius:6px; border:1px solid #30363d; display:block;" alt="DevTools Styles Evidence - Merged Categories Wrapper" />
+            </a>
+          </div>
+        `;
+      }
+
       return `
         <tr class="audit-row" data-category="${escapeHtml(r.category)}" data-viewport="${escapeHtml(r.viewport)}">
           <td class="col-status">
@@ -124,6 +169,7 @@ async function run() {
           <td class="col-element">
             <strong class="elem-title">${escapeHtml(r.elementName)}</strong>
             <div class="elem-path">${pathHtml}</div>
+            ${screenshotEvidenceHtml}
           </td>
           <td class="col-expected">
             <div class="spec-bubble exp-bubble">${escapeHtml(r.expectedSpec)}</div>
@@ -613,7 +659,7 @@ async function run() {
       <div class="kpi-card blue">
         <div class="kpi-val" style="color: var(--primary);">${allItems.length}</div>
         <div class="kpi-lbl">Total Checks Across Viewports</div>
-        <div class="kpi-sub">Desktop (368) + Tablet (269) + Mobile (252)</div>
+        <div class="kpi-sub">Desktop (${desktopItems.length}) + Tablet (${tabletItems.length}) + Mobile (${mobileItems.length})</div>
       </div>
       <div class="kpi-card green">
         <div class="kpi-val" style="color: var(--success);">${allItems.length}</div>
