@@ -27,6 +27,7 @@ async function run() {
     desktopItems.push({
       viewport: parts[0],
       section: parts[1],
+      subSection: parts[2],
       category: parts[3],
       elementName: parts[4],
       figmaPath: parts[5],
@@ -188,14 +189,21 @@ async function run() {
     }).join('');
   }
 
-  // Generate tabbed sections for each viewport
+  // Generate tabbed sections with full Sub-Section hierarchy for each viewport
   const viewportSectionsHtml = viewportsData.map(vp => {
-    // Group items by section
-    const secMap = new Map<string, AuditItem[]>();
+    // Group items by Section -> SubSection
+    const secMap = new Map<string, Map<string, AuditItem[]>>();
     vp.items.forEach(it => {
-      const list = secMap.get(it.section) || [];
-      list.push(it);
-      secMap.set(it.section, list);
+      const s = it.section || 'General';
+      const sub = it.subSection || 'General';
+      if (!secMap.has(s)) {
+        secMap.set(s, new Map());
+      }
+      const subMap = secMap.get(s)!;
+      if (!subMap.has(sub)) {
+        subMap.set(sub, []);
+      }
+      subMap.get(sub)!.push(it);
     });
 
     const orderedSections: string[] = [];
@@ -207,24 +215,47 @@ async function run() {
     });
 
     const sectionsHtml = orderedSections.map((secName, sIdx) => {
-      const secRows = secMap.get(secName) || [];
-      const secPassed = secRows.filter(r => r.status.toUpperCase().includes('PASS')).length;
-      const secRate = secRows.length > 0 ? Math.round((secPassed / secRows.length) * 100) : 100;
+      const subMap = secMap.get(secName)!;
+      let secTotal = 0;
+      let secPassed = 0;
+      let secDefects = 0;
+      const layerStats = new Map<string, number>();
 
-      return `
-        <div class="section-card">
-          <div class="section-header" onclick="toggleSection('${vp.key}', ${sIdx})">
-            <div class="sec-left">
-              <span class="sec-number">#0${sIdx + 1}</span>
-              <h3 class="sec-title">${escapeHtml(secName)}</h3>
-              <span class="sec-count-badge">${secRows.length} elements</span>
+      for (const [subName, subRows] of subMap.entries()) {
+        secTotal += subRows.length;
+        for (const r of subRows) {
+          layerStats.set(r.category, (layerStats.get(r.category) || 0) + 1);
+          if (r.status.toUpperCase().includes('PASS')) {
+            secPassed++;
+          } else if (r.status.toUpperCase().includes('DEFECT') || r.status.toUpperCase().includes('BUG')) {
+            secDefects++;
+          }
+        }
+      }
+
+      const secRate = secTotal > 0 ? Math.round((secPassed / secTotal) * 100) : 100;
+
+      const layerPills = Array.from(layerStats.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([cat, count]) => {
+          let pillClass = 'cat-pill';
+          if (cat.includes('Dynamic Catalog')) pillClass = 'cat-pill pill-catalog';
+          else if (cat.includes('Dot')) pillClass = 'cat-pill pill-dot';
+          else if (cat.includes('Slider') || cat.includes('Progress')) pillClass = 'cat-pill pill-progress';
+          return `<span class="${pillClass}">${escapeHtml(cat)}: <strong>${count}</strong></span>`;
+        })
+        .join(' ');
+
+      // Render each sub-section inside the section card
+      const subSectionBlocks = Array.from(subMap.entries()).map(([subName, subRows]) => {
+        return `
+          <div class="subsection-wrapper">
+            <div class="subsection-header">
+              <span class="sub-tree-icon">↳</span>
+              <span class="sub-label">Figma Sub-Section:</span>
+              <h4 class="sub-title">${escapeHtml(subName)}</h4>
+              <span class="sub-count-badge">${subRows.length} Elements</span>
             </div>
-            <div class="sec-right">
-              <span class="rate-badge ${secRate === 100 ? 'rate-100' : 'rate-high'}">${secRate}% Match</span>
-              <span class="chevron" id="chevron-${vp.key}-${sIdx}">▼</span>
-            </div>
-          </div>
-          <div class="section-content" id="content-${vp.key}-${sIdx}">
             <div class="table-container">
               <table class="audit-table">
                 <thead>
@@ -239,9 +270,32 @@ async function run() {
                   </tr>
                 </thead>
                 <tbody>
-                  ${renderTableRows(secRows, vp.key)}
+                  ${renderTableRows(subRows, vp.key)}
                 </tbody>
               </table>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <div class="section-card ${secDefects > 0 ? 'sec-has-defects' : ''}">
+          <div class="section-header" onclick="toggleSection('${vp.key}', ${sIdx})">
+            <div class="sec-left">
+              <span class="sec-number">#0${sIdx + 1}</span>
+              <h3 class="sec-title">${escapeHtml(secName)}</h3>
+              <span class="sec-count-badge">${secTotal} elements</span>
+              ${secDefects > 0 ? `<span class="sec-defect-badge">⚠️ ${secDefects} Developer Defect${secDefects > 1 ? 's' : ''}</span>` : `<span class="sec-clean-badge">✓ Strict 1:1 Clean</span>`}
+            </div>
+            <div class="sec-right">
+              <div class="sec-layer-pills">${layerPills}</div>
+              <span class="rate-badge ${secRate === 100 ? 'rate-100' : 'rate-high'}">${secRate}% Match</span>
+              <span class="chevron" id="chevron-${vp.key}-${sIdx}">▼</span>
+            </div>
+          </div>
+          <div class="section-content" id="content-${vp.key}-${sIdx}">
+            <div class="subsections-container">
+              ${subSectionBlocks}
             </div>
           </div>
         </div>
@@ -254,11 +308,12 @@ async function run() {
           <div class="vp-banner-info">
             <span class="vp-banner-tag">${vp.label}</span>
             <span class="vp-banner-stat"><strong>${vp.items.length}</strong> Total Components Audited</span>
-            <span class="vp-banner-stat"><strong>100%</strong> Human QA Verification Rate</span>
+            <span class="vp-banner-stat"><strong>Section &amp; Sub-Section Visual Hierarchy</strong></span>
           </div>
           <div class="vp-banner-legend">
             <span class="legend-item"><span class="badge-dot dot-pass"></span> Exact Design Match</span>
             <span class="legend-item"><span class="badge-dot dot-cat"></span> Dynamic Catalog Data (INR)</span>
+            <span class="legend-item"><span class="badge-dot" style="background:#ff7b72;"></span> Developer Defect</span>
           </div>
         </div>
         ${sectionsHtml}
@@ -501,6 +556,9 @@ async function run() {
       overflow: hidden;
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
+    .sec-has-defects {
+      border-color: rgba(248, 81, 73, 0.4);
+    }
     .section-header {
       background: linear-gradient(90deg, #182236 0%, #121824 100%);
       padding: 16px 20px;
@@ -515,7 +573,7 @@ async function run() {
     .section-header:hover {
       background: linear-gradient(90deg, #1f2b45 0%, #151d2c 100%);
     }
-    .sec-left { display: flex; align-items: center; gap: 12px; }
+    .sec-left { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .sec-number {
       background: rgba(88, 166, 255, 0.15);
       color: var(--primary);
@@ -533,7 +591,26 @@ async function run() {
       padding: 3px 8px;
       border-radius: 10px;
     }
-    .sec-right { display: flex; align-items: center; gap: 12px; }
+    .sec-defect-badge {
+      background: rgba(248, 81, 73, 0.2);
+      color: #ff7b72;
+      border: 1px solid rgba(248, 81, 73, 0.4);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .sec-clean-badge {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--success);
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .sec-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .sec-layer-pills { display: flex; gap: 6px; flex-wrap: wrap; }
     .rate-badge {
       font-size: 12px;
       font-weight: 800;
@@ -544,6 +621,59 @@ async function run() {
     .rate-high { background: rgba(210, 153, 34, 0.2); color: var(--warning); border: 1px solid rgba(210, 153, 34, 0.4); }
     .chevron { color: var(--text-muted); font-size: 11px; transition: transform 0.2s; }
     .chevron.rotated { transform: rotate(-90deg); }
+
+    /* Sub-section hierarchy styles */
+    .subsections-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px 0;
+    }
+    .subsection-wrapper {
+      border-top: 1px solid var(--card-border);
+      padding-top: 10px;
+    }
+    .subsection-wrapper:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+    .subsection-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px 10px;
+      background: rgba(255,255,255,0.015);
+    }
+    .sub-tree-icon {
+      color: var(--primary);
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .sub-label {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sub-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #79c0ff;
+      background: rgba(88, 166, 255, 0.1);
+      border: 1px solid rgba(88, 166, 255, 0.25);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: ui-monospace, monospace;
+    }
+    .sub-count-badge {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--card-inner);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--card-border);
+    }
 
     /* Tables */
     .section-content { display: block; }

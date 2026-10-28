@@ -4,6 +4,7 @@ import path from 'path';
 export interface AuditItem {
   viewport: string;
   section: string;
+  subSection?: string;
   category: string;
   elementName: string;
   figmaPath: string;
@@ -64,7 +65,26 @@ export function buildAuditedItemsForViewport(
   });
 
   catalog.forEach((item: any) => {
-    const sec = item.section || 'General';
+    // Parse Section and Sub-Section from figmaPath
+    let sec = item.section || 'General';
+    let subSec = 'General';
+    
+    if (item.figmaPath) {
+      const parts = item.figmaPath.split(' > ').map((p: string) => p.trim());
+      // e.g. "01. Home — Tablet 744 > 01. Home — Tablet 744 > HERO > Central > Content > STATEMENT > YOU’RE EXATLY WHERE YOU ARE MEANT TO BE"
+      if (parts.length > 2 && !['01. Home — Tablet 744', '01. Home — Mobile 390'].includes(parts[2])) {
+        sec = parts[2];
+        subSec = parts.length > 3 ? parts[3] : parts[2];
+      } else if (parts.length > 1 && !['01. Home — Tablet 744', '01. Home — Mobile 390'].includes(parts[1])) {
+        sec = parts[1];
+        subSec = parts.length > 2 ? parts[2] : parts[1];
+      }
+    }
+
+    // Standardize section naming across artboards
+    if (sec === 'Ink Reveal' || sec === 'Banner' || sec === 'banner-red-slab 2') {
+      sec = 'Header';
+    }
 
     if (item.category === 'Typography') {
       const text = (item.characters || item.name || '').trim();
@@ -86,6 +106,7 @@ export function buildAuditedItemsForViewport(
         items.push({
           viewport: viewportLabel,
           section: sec,
+          subSection: subSec,
           category: 'Typography (Catalog Data)',
           elementName: text,
           figmaPath: item.figmaPath,
@@ -116,6 +137,7 @@ export function buildAuditedItemsForViewport(
         items.push({
           viewport: viewportLabel,
           section: sec,
+          subSection: subSec,
           category: 'Typography',
           elementName: text,
           figmaPath: item.figmaPath,
@@ -135,6 +157,7 @@ export function buildAuditedItemsForViewport(
         items.push({
           viewport: viewportLabel,
           section: sec,
+          subSection: subSec,
           category: 'Typography',
           elementName: text,
           figmaPath: item.figmaPath,
@@ -154,6 +177,7 @@ export function buildAuditedItemsForViewport(
         items.push({
           viewport: viewportLabel,
           section: sec,
+          subSection: subSec,
           category: 'Typography',
           elementName: text,
           figmaPath: item.figmaPath,
@@ -173,6 +197,7 @@ export function buildAuditedItemsForViewport(
         items.push({
           viewport: viewportLabel,
           section: sec,
+          subSection: subSec,
           category: 'Typography',
           elementName: text,
           figmaPath: item.figmaPath,
@@ -191,6 +216,7 @@ export function buildAuditedItemsForViewport(
       items.push({
         viewport: viewportLabel,
         section: sec,
+        subSection: subSec,
         category: 'Typography',
         elementName: text,
         figmaPath: item.figmaPath,
@@ -208,6 +234,7 @@ export function buildAuditedItemsForViewport(
       items.push({
         viewport: viewportLabel,
         section: sec,
+        subSection: subSec,
         category: 'Section Box Model',
         elementName: item.name,
         figmaPath: item.figmaPath,
@@ -224,6 +251,7 @@ export function buildAuditedItemsForViewport(
       items.push({
         viewport: viewportLabel,
         section: sec,
+        subSection: subSec,
         category: 'Button / Interactive Control',
         elementName: item.name,
         figmaPath: item.figmaPath,
@@ -245,6 +273,7 @@ export function buildAuditedItemsForViewport(
       items.push({
         viewport: viewportLabel,
         section: sec,
+        subSection: subSec,
         category: 'Media / Image / Marquee',
         elementName: item.name,
         figmaPath: item.figmaPath,
@@ -260,6 +289,7 @@ export function buildAuditedItemsForViewport(
       items.push({
         viewport: viewportLabel,
         section: sec,
+        subSection: subSec,
         category: 'SVG / Vector Icon',
         elementName: item.name,
         figmaPath: item.figmaPath,
@@ -275,6 +305,7 @@ export function buildAuditedItemsForViewport(
       items.push({
         viewport: viewportLabel,
         section: sec,
+        subSection: subSec,
         category: 'Slider / Progress Bar',
         elementName: item.name,
         figmaPath: item.figmaPath,
