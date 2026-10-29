@@ -15,14 +15,18 @@ function getTargets() {
 async function captureAuthenticRealDevToolsDefects() {
   console.log('🚀 Starting Universal 100% Real Google Chrome DevTools Automation Engine...');
 
-  // 1. Launch Storefront Browser at authentic 1280x866
+  const TARGET_URL = process.env.QA_STORE_URL || 'https://www.irreverentink.com/?preview_theme_id=181104476407';
+  const VIEWPORT_WIDTH = parseInt(process.env.QA_VIEWPORT_WIDTH || '1280', 10);
+  const VIEWPORT_HEIGHT = parseInt(process.env.QA_VIEWPORT_HEIGHT || '866', 10);
+
+  // 1. Launch Storefront Browser at authentic viewport
   const browser = await chromium.launch({
     headless: true,
     args: ['--remote-debugging-port=9222', '--remote-allow-origins=*']
   });
-  const page = await browser.newPage({ viewport: { width: 1280, height: 866 } });
-  console.log('🌐 Loading live Shopify theme at 1280x866...');
-  await page.goto('https://www.irreverentink.com/?preview_theme_id=181104476407', { waitUntil: 'domcontentloaded' });
+  const page = await browser.newPage({ viewport: { width: VIEWPORT_WIDTH, height: VIEWPORT_HEIGHT } });
+  console.log(`🌐 Loading live store (${VIEWPORT_WIDTH}x${VIEWPORT_HEIGHT}): ${TARGET_URL}...`);
+  await page.goto(TARGET_URL, { waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(4000);
 
   // Suppress all popups & preview bar banners
