@@ -791,10 +791,10 @@ async function run() {
         <div class="kpi-lbl">Total Checks Across Viewports</div>
         <div class="kpi-sub">Desktop (${desktopItems.length}) + Tablet (${tabletItems.length}) + Mobile (${mobileItems.length})</div>
       </div>
-      <div class="kpi-card green">
-        <div class="kpi-val" style="color: var(--success);">${allItems.length}</div>
-        <div class="kpi-lbl">Verified Exact Matches</div>
-        <div class="kpi-sub">Typography, measurements &amp; responsiveness</div>
+      <div class="kpi-card ${allItems.filter(i => i.status.toUpperCase().includes('DEFECT')).length > 0 ? 'red' : 'green'}">
+        <div class="kpi-val" style="color: ${allItems.filter(i => i.status.toUpperCase().includes('DEFECT')).length > 0 ? '#ff7b72' : 'var(--success)'};">${allItems.filter(i => i.status.toUpperCase().includes('DEFECT')).length}</div>
+        <div class="kpi-lbl">Developer Defects Detected</div>
+        <div class="kpi-sub">Padding overshoot &amp; merged wrapper architecture</div>
       </div>
       <div class="kpi-card purple">
         <div class="kpi-val" style="color: #a371f7;">${allItems.filter(i => i.category.includes('Catalog Data')).length}</div>
@@ -802,9 +802,9 @@ async function run() {
         <div class="kpi-sub">Valid client products preserved across viewports</div>
       </div>
       <div class="kpi-card green">
-        <div class="kpi-val" style="color: var(--success);">100%</div>
-        <div class="kpi-lbl">Human QA Pass Rate</div>
-        <div class="kpi-sub">Zero false-positive design defects</div>
+        <div class="kpi-val" style="color: var(--success);">${((allItems.filter(i => !i.status.toUpperCase().includes('DEFECT')).length / allItems.length) * 100).toFixed(1)}%</div>
+        <div class="kpi-lbl">Strict 1:1 QA Pass Rate</div>
+        <div class="kpi-sub">${allItems.filter(i => !i.status.toUpperCase().includes('DEFECT')).length} out of ${allItems.length} verified passed</div>
       </div>
     </div>
 

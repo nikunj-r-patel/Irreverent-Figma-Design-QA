@@ -15,7 +15,10 @@
     "figma:refresh": "playwright test tests/figma/figma-refresh-offline-reference.spec.ts",
     "clickup:sync": "playwright test tests/audit/clickup-sync-client.spec.ts",
     "report:html": "playwright test tests/audit/bug-report-html-generator.spec.ts",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "qa:audit": "npx tsx scripts/generate-multi-viewport-report.ts",
+    "qa:exact-1280": "npx tsx scripts/build-exact-html-report.ts",
+    "qa:devtools-evidence": "node scripts/capture-real-chrome-native-devtools.js"
   },
   "devDependencies": {
     "@figma/rest-api-spec": "^0.42.0",
