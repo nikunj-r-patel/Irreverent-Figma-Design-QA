@@ -13,6 +13,7 @@
     "audit:verify": "playwright test tests/audit/",
     "figma:freeze": "playwright test tests/figma/figma-project-freezer.spec.ts",
     "figma:refresh": "playwright test tests/figma/figma-refresh-offline-reference.spec.ts",
+    "figma:fetch": "npx tsx scripts/fetch-figma-data-dual-mode.ts",
     "clickup:sync": "playwright test tests/audit/clickup-sync-client.spec.ts",
     "report:html": "playwright test tests/audit/bug-report-html-generator.spec.ts",
     "report": "playwright show-report",
