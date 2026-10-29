@@ -25,7 +25,7 @@ async function run() {
   for (let i = 1; i < desktopTsvLines.length; i++) {
     const parts = desktopTsvLines[i].split('\t');
     desktopItems.push({
-      viewport: parts[0],
+      viewport: 'Desktop (1280px)',
       section: parts[1],
       subSection: parts[2],
       category: parts[3],
