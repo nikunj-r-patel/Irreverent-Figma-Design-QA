@@ -17,6 +17,7 @@
     "report:html": "playwright test tests/audit/bug-report-html-generator.spec.ts",
     "report": "playwright show-report",
     "qa:audit": "npx tsx scripts/generate-multi-viewport-report.ts",
+    "qa:18-viewports": "npx tsx scripts/generate-18-viewports-report.ts",
     "qa:exact-1280": "npx tsx scripts/build-exact-html-report.ts",
     "qa:devtools-evidence": "node scripts/capture-real-chrome-native-devtools.js"
   },

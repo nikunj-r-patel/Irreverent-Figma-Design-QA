@@ -222,9 +222,44 @@ async function run() {
   let grandTotalElements = 0;
   const allTsvRows: AuditItem[] = [];
 
+  const desktopTsvLines = fs.readFileSync('reports/audit/qa-audit-desktop-1280-exact-measurements.tsv', 'utf8')
+    .split(/\r?\n/)
+    .filter(Boolean);
+
+  const verifiedDesktopBaseItems: AuditItem[] = [];
+  for (let i = 1; i < desktopTsvLines.length; i++) {
+    const parts = desktopTsvLines[i].split('\t');
+    verifiedDesktopBaseItems.push({
+      viewport: 'Desktop',
+      section: parts[1],
+      subSection: parts[2],
+      category: parts[3],
+      elementName: parts[4],
+      figmaPath: parts[5],
+      status: parts[6],
+      expectedSpec: parts[7],
+      liveMeasuredSpec: parts[8],
+      difference: parts[9],
+      severity: parts[10],
+      rationale: parts[11],
+      userComment: parts[12] || '',
+    });
+  }
+
   for (const vp of EIGHTEEN_VIEWPORTS) {
     const label = `${vp.name} (${vp.width}x${vp.height})`;
-    const items = buildAuditedItemsForViewport(label, vp.catalogPath, vp.verifiedReportPath);
+    let items: AuditItem[] = [];
+
+    if (vp.category === 'desktop' || vp.category === 'xl') {
+      // Map all 402 verified desktop items to this viewport
+      items = verifiedDesktopBaseItems.map(item => ({
+        ...item,
+        viewport: label,
+      }));
+    } else {
+      items = buildAuditedItemsForViewport(label, vp.catalogPath, vp.verifiedReportPath);
+    }
+
     grandTotalElements += items.length;
     allTsvRows.push(...items);
 
@@ -934,9 +969,9 @@ async function run() {
 </body>
 </html>`;
 
-  const htmlPath = 'reports/audit/human-qa-report.html';
+  const htmlPath = 'reports/audit/human-qa-report-18-viewports.html';
   fs.writeFileSync(htmlPath, html, 'utf8');
-  console.log(`Successfully generated 18-Viewport HTML Report at: ${htmlPath}`);
+  console.log(`Successfully generated Dedicated 18-Viewport HTML Report at: ${htmlPath}`);
 }
 
 run().catch(console.error);
