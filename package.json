@@ -1,7 +1,7 @@
 {
-  "name": "paragon-figma-design-qa",
-  "version": "1.0.0",
-  "description": "Figma design QA automation framework for Paragon",
+  "name": "omnidesign-qa",
+  "version": "2.0.0",
+  "description": "OmniDesign-QA: Universal Enterprise Multi-Viewport Design QA Automation Platform",
   "private": true,
   "scripts": {
     "test": "playwright test",

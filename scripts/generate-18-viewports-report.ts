@@ -564,12 +564,14 @@ async function run() {
 
   const now = new Date().toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'short' });
 
+  const projectName = process.env.PROJECT_NAME || 'Irreverent Ink';
+
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full 18-Viewport Senior Human QA Audit — Complete Matrix</title>
+  <title>OmniDesign-QA — 18-Viewport Audit Suite (${projectName})</title>
   <style>
     :root {
       --bg: #090d16;
@@ -1010,11 +1012,12 @@ async function run() {
     <header class="header">
       <div class="header-info">
         <h1>
-          18-Viewport Senior Human QA Audit
-          <span class="header-badge">Complete Matrix</span>
+          OmniDesign-QA
+          <span class="header-badge">Universal QA Platform</span>
+          <span class="header-badge" style="background: rgba(63, 185, 80, 0.2); color: var(--success); border-color: rgba(63, 185, 80, 0.4);">18-Viewport Matrix</span>
         </h1>
         <div class="header-sub">
-          Store: <strong>Irreverent Ink (Shopify Theme Preview)</strong> &bull; All 18 Viewports Tested &bull; Generated: ${now}
+          Project: <strong>${escapeHtml(projectName)}</strong> &bull; Responsive 18-Viewport Layout, Clipping &amp; Component Audit &bull; Generated: ${now}
         </div>
       </div>
       <div class="header-actions">
