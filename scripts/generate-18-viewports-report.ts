@@ -280,6 +280,7 @@ async function run() {
     'Viewport',
     'Category (XL/Desktop/Tablet/Mobile)',
     'Section',
+    'SubSection',
     'Component Category',
     'Element / Component Name',
     'Figma Breadcrumb Path',
@@ -300,6 +301,7 @@ async function run() {
       r.viewport,
       cat,
       r.section,
+      r.subSection || 'General',
       r.category,
       r.elementName,
       r.figmaPath,
@@ -336,14 +338,42 @@ async function run() {
     return rows.map((r, rIdx) => {
       const isPassed = r.status.toUpperCase().includes('PASS');
       const isCatalog = r.category.includes('Catalog Data');
+      const isDefect = r.status.toUpperCase().includes('DEFECT') || r.status.toUpperCase().includes('BUG');
       const badgeClass = isPassed ? (isCatalog ? 'badge-catalog' : 'badge-pass') : 'badge-defect';
       const statusIcon = isPassed ? '✓' : '✗';
-      const commentKey = `comment_${vpKey}_${r.section}_${rIdx}`;
+      const commentKey = `comment_${vpKey}_${r.section}_${r.subSection}_${rIdx}`;
 
       const pathHtml = r.figmaPath
         .split('>')
         .map(p => escapeHtml(p.trim()))
         .join(' <span class="bc-sep">&gt;</span> ');
+
+      let screenshotEvidenceHtml = '';
+      if (r.elementName === 'Reviews Section Container' && isDefect) {
+        screenshotEvidenceHtml = `
+          <div style="margin-top:10px; padding:10px; background:#0b111a; border:1px solid #ff7b72; border-radius:8px;">
+            <div style="font-size:11px; font-weight:800; color:#ff7b72; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+              <span>🔍 REAL CHROME DEVTOOLS EVIDENCE (COMPUTED BOX MODEL):</span>
+              <a href="screenshots/defect-1-reviews-padding-overshoot.png" target="_blank" style="color:#58a6ff; text-decoration:underline;">Open Full Resolution ↗</a>
+            </div>
+            <a href="screenshots/defect-1-reviews-padding-overshoot.png" target="_blank">
+              <img src="screenshots/defect-1-reviews-padding-overshoot.png" style="width:100%; max-width:850px; border-radius:6px; border:1px solid #30363d; display:block;" alt="DevTools Computed Evidence - Reviews Padding Overshoot" />
+            </a>
+          </div>
+        `;
+      } else if (r.section === 'Categories' && r.category === 'Section Box Model' && isDefect) {
+        screenshotEvidenceHtml = `
+          <div style="margin-top:10px; padding:10px; background:#0b111a; border:1px solid #ff7b72; border-radius:8px;">
+            <div style="font-size:11px; font-weight:800; color:#ff7b72; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+              <span>🔍 REAL CHROME DEVTOOLS EVIDENCE (STYLES & EXPANDED DOM SUBSECTIONS):</span>
+              <a href="screenshots/defect-2-merged-categories-wrapper.png" target="_blank" style="color:#58a6ff; text-decoration:underline;">Open Full Resolution ↗</a>
+            </div>
+            <a href="screenshots/defect-2-merged-categories-wrapper.png" target="_blank">
+              <img src="screenshots/defect-2-merged-categories-wrapper.png" style="width:100%; max-width:850px; border-radius:6px; border:1px solid #30363d; display:block;" alt="DevTools Styles Evidence - Merged Categories Wrapper" />
+            </a>
+          </div>
+        `;
+      }
 
       return `
         <tr class="audit-row" data-category="${escapeHtml(r.category)}">
@@ -356,12 +386,13 @@ async function run() {
           <td class="col-element">
             <strong class="elem-title">${escapeHtml(r.elementName)}</strong>
             <div class="elem-path">${pathHtml}</div>
+            ${screenshotEvidenceHtml}
           </td>
           <td class="col-expected">
             <div class="spec-bubble exp-bubble">${escapeHtml(r.expectedSpec)}</div>
           </td>
           <td class="col-measured">
-            <div class="spec-bubble act-bubble">${escapeHtml(r.liveMeasuredSpec)}</div>
+            <div class="spec-bubble act-bubble ${isDefect ? 'act-bubble-defect' : ''}">${escapeHtml(r.liveMeasuredSpec)}</div>
           </td>
           <td class="col-rationale">
             <div class="rationale-text">${escapeHtml(r.rationale)}</div>
@@ -374,14 +405,21 @@ async function run() {
     }).join('');
   }
 
-  // Build Tab Panels
+  // Build Tab Panels with full Sub-Section hierarchy
   const tabPanelsHtml = viewportResults.map((vr, vpIdx) => {
     const vp = vr.definition;
-    const secMap = new Map<string, AuditItem[]>();
+    const secMap = new Map<string, Map<string, AuditItem[]>>();
     vr.items.forEach(it => {
-      const list = secMap.get(it.section) || [];
-      list.push(it);
-      secMap.set(it.section, list);
+      const s = it.section || 'General';
+      const sub = it.subSection || 'General';
+      if (!secMap.has(s)) {
+        secMap.set(s, new Map());
+      }
+      const subMap = secMap.get(s)!;
+      if (!subMap.has(sub)) {
+        subMap.set(sub, []);
+      }
+      subMap.get(sub)!.push(it);
     });
 
     const orderedSections: string[] = [];
@@ -393,24 +431,47 @@ async function run() {
     });
 
     const sectionsHtml = orderedSections.map((secName, sIdx) => {
-      const secRows = secMap.get(secName) || [];
-      const secPassed = secRows.filter(r => r.status.toUpperCase().includes('PASS')).length;
-      const secRate = secRows.length > 0 ? Math.round((secPassed / secRows.length) * 100) : 100;
+      const subMap = secMap.get(secName)!;
+      let secTotal = 0;
+      let secPassed = 0;
+      let secDefects = 0;
+      const layerStats = new Map<string, number>();
 
-      return `
-        <div class="section-card">
-          <div class="section-header" onclick="toggleSection('${vp.name}', ${sIdx})">
-            <div class="sec-left">
-              <span class="sec-number">#0${sIdx + 1}</span>
-              <h3 class="sec-title">${escapeHtml(secName)}</h3>
-              <span class="sec-count-badge">${secRows.length} elements</span>
+      for (const [subName, subRows] of subMap.entries()) {
+        secTotal += subRows.length;
+        for (const r of subRows) {
+          layerStats.set(r.category, (layerStats.get(r.category) || 0) + 1);
+          if (r.status.toUpperCase().includes('PASS')) {
+            secPassed++;
+          } else if (r.status.toUpperCase().includes('DEFECT') || r.status.toUpperCase().includes('BUG')) {
+            secDefects++;
+          }
+        }
+      }
+
+      const secRate = secTotal > 0 ? Math.round((secPassed / secTotal) * 100) : 100;
+
+      const layerPills = Array.from(layerStats.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([cat, count]) => {
+          let pillClass = 'cat-pill';
+          if (cat.includes('Dynamic Catalog')) pillClass = 'cat-pill pill-catalog';
+          else if (cat.includes('Dot')) pillClass = 'cat-pill pill-dot';
+          else if (cat.includes('Slider') || cat.includes('Progress')) pillClass = 'cat-pill pill-progress';
+          return `<span class="${pillClass}">${escapeHtml(cat)}: <strong>${count}</strong></span>`;
+        })
+        .join(' ');
+
+      // Render each sub-section within the section
+      const subSectionBlocks = Array.from(subMap.entries()).map(([subName, subRows]) => {
+        return `
+          <div class="subsection-wrapper">
+            <div class="subsection-header">
+              <span class="sub-tree-icon">↳</span>
+              <span class="sub-label">Figma Sub-Section:</span>
+              <h4 class="sub-title">${escapeHtml(subName)}</h4>
+              <span class="sub-count-badge">${subRows.length} Elements</span>
             </div>
-            <div class="sec-right">
-              <span class="rate-badge ${secRate === 100 ? 'rate-100' : 'rate-high'}">${secRate}% Match</span>
-              <span class="chevron" id="chevron-${vp.name}-${sIdx}">▼</span>
-            </div>
-          </div>
-          <div class="section-content" id="content-${vp.name}-${sIdx}">
             <div class="table-container">
               <table class="audit-table">
                 <thead>
@@ -425,9 +486,32 @@ async function run() {
                   </tr>
                 </thead>
                 <tbody>
-                  ${renderTableRows(secRows, vp.name)}
+                  ${renderTableRows(subRows, vp.name)}
                 </tbody>
               </table>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <div class="section-card ${secDefects > 0 ? 'sec-has-defects' : ''}">
+          <div class="section-header" onclick="toggleSection('${vp.name}', ${sIdx})">
+            <div class="sec-left">
+              <span class="sec-number">#0${sIdx + 1}</span>
+              <h3 class="sec-title">${escapeHtml(secName)}</h3>
+              <span class="sec-count-badge">${secTotal} elements</span>
+              ${secDefects > 0 ? `<span class="sec-defect-badge">⚠️ ${secDefects} Developer Defect${secDefects > 1 ? 's' : ''}</span>` : `<span class="sec-clean-badge">✓ Strict 1:1 Clean</span>`}
+            </div>
+            <div class="sec-right">
+              <div class="sec-layer-pills">${layerPills}</div>
+              <span class="rate-badge ${secRate === 100 ? 'rate-100' : 'rate-high'}">${secRate}% Match</span>
+              <span class="chevron" id="chevron-${vp.name}-${sIdx}">▼</span>
+            </div>
+          </div>
+          <div class="section-content" id="content-${vp.name}-${sIdx}">
+            <div class="subsections-container">
+              ${subSectionBlocks}
             </div>
           </div>
         </div>
@@ -440,13 +524,14 @@ async function run() {
           <div class="vp-banner-info">
             <span class="vp-banner-tag">${vp.name.toUpperCase()} (${vp.width}x${vp.height})</span>
             <span class="vp-banner-stat"><strong>${vr.items.length}</strong> Elements Audited</span>
+            <span class="vp-banner-stat"><strong>Section &amp; Sub-Section Visual Tree</strong></span>
             <span class="vp-banner-stat"><strong>Horizontal Overflow:</strong> 0px (No Clipping)</span>
             <span class="vp-banner-stat"><strong>Element Overlaps:</strong> 0 Issues</span>
-            <span class="vp-banner-stat"><strong>QA Pass Rate:</strong> 100%</span>
           </div>
           <div class="vp-banner-legend">
             <span class="legend-item"><span class="badge-dot dot-pass"></span> Design Match</span>
             <span class="legend-item"><span class="badge-dot dot-cat"></span> Dynamic Catalog (INR)</span>
+            <span class="legend-item"><span class="badge-dot" style="background:#ff7b72;"></span> Developer Defect</span>
           </div>
         </div>
         ${sectionsHtml}
@@ -762,6 +847,80 @@ async function run() {
     .rate-high { background: rgba(210, 153, 34, 0.2); color: var(--warning); border: 1px solid rgba(210, 153, 34, 0.4); }
     .chevron { color: var(--text-muted); font-size: 11px; transition: transform 0.2s; }
     .chevron.rotated { transform: rotate(-90deg); }
+
+    .sec-has-defects { border-color: rgba(248, 81, 73, 0.4) !important; }
+    .sec-defect-badge {
+      font-size: 11px;
+      font-weight: 800;
+      color: #ff7b72;
+      background: rgba(248, 81, 73, 0.15);
+      border: 1px solid rgba(248, 81, 73, 0.3);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .sec-clean-badge {
+      font-size: 11px;
+      font-weight: 800;
+      color: #3fb950;
+      background: rgba(63, 185, 80, 0.15);
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .sec-layer-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    /* Sub-section hierarchy styles */
+    .subsections-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px 0;
+    }
+    .subsection-wrapper {
+      border-top: 1px solid var(--card-border);
+      padding-top: 10px;
+    }
+    .subsection-wrapper:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+    .subsection-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px 10px;
+      background: rgba(255,255,255,0.015);
+    }
+    .sub-tree-icon {
+      color: var(--primary);
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .sub-label {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sub-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #79c0ff;
+      background: rgba(88, 166, 255, 0.1);
+      border: 1px solid rgba(88, 166, 255, 0.25);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: ui-monospace, monospace;
+    }
+    .sub-count-badge {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--card-inner);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--card-border);
+    }
 
     /* Tables */
     .section-content { display: block; }
